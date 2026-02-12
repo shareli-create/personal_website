@@ -3,58 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datasets - Prof. Shlomo Hareli</title>
+    <title>Prof. Shlomo Hareli - Datasets</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Prof. Shlomo Hareli</h1>
-            <p class="subtitle">Professor of Social Psychology</p>
-            <p class="subtitle">University of Haifa, School of Business Administration</p>
+            <p>Social Psychologist | University of Haifa</p>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="students.html">Students</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
-            <li><a href="datasets.html" class="active">Datasets</a></li>
-            <li><a href="links.html">Links</a></li>
-            
-        </ul>
-    </nav>
-
     <div class="container">
-        <div class="content">
-            
-<h2>Research Datasets</h2>
+        <main>
+            <h1>Research Datasets</h1>
 
-<h3>Haifa Set of Facial Expressions of Emotions (HSFEE)</h3>
-<p>The HSFEE is a comprehensive database of facial expressions developed for emotion perception research. The dataset includes validated expressions of basic emotions photographed under controlled conditions.</p>
+            <section>
+                <h2>Haifa Set of Facial Expressions of Emotions (HSFEE)</h2>
 
-<h4>Dataset Features:</h4>
-<ul>
-    <li>Multiple emotion categories</li>
-    <li>Professional photography</li>
-    <li>Validated expressions</li>
-    <li>Available for research use</li>
-</ul>
+                <div class="dataset-card">
+                    <h3>Overview</h3>
+                    <p>HSFEE (Haifa Set of Facial Expressions of Emotions) consists of emotional facial expressions by 3 Israeli men and 3 Israeli women. Each expression was created by instructing actors to show the respective expression. The set was created by Dr. Shimon Elkabetz in collaboration with Prof. Shlomo Hareli and Prof. Ursula Hess.</p>
 
-<h3>Body Shape and Expressions Dataset</h3>
-<p>AI-generated images exploring the intersection of body language and emotional expression. Two versions available with different methodological approaches.</p>
+                    <p>Expressions were validated in a study using them (Hareli, Elkabetz, & Hess, 2019). The set contains expressions of happiness, awe, surprise and neutrality for each actor. Photos were taken against a green screen background to enable electronic manipulation of background context.</p>
+                </div>
 
-<h4>Access Information:</h4>
-<p>For access to these datasets, please contact Prof. Hareli via the <a href="contact.html">contact page</a> with details about your research project.</p>
+                <h3>Terms of Use</h3>
+                <div class="dataset-card">
+                    <p>The Haifa Set of Facial Expressions of Emotions and stimuli are to be used <strong>without charge for non-commercial research purposes only</strong>. All and any (re-)distribution and publishing without the written consent of the copyright holders is forbidden.</p>
 
-        </div>
+                    <p><strong>Copyright holder:</strong> Laboratory for the Study of Social Perception of Emotions, the University of Haifa, Haifa Israel.</p>
+
+                    <p>In order to use the stimuli for purposes of illustration in conferences or manuscripts, consent from the authors of the HSFEE must be obtained. Please contact Prof. Hareli Shlomo at: <strong>shareli@univ.haifa.ac.il</strong></p>
+
+                    <p><strong>Required Attribution:</strong> The creators of the set, Dr. Shimon Elkabetz, Prof. Ursula Hess and Prof. Shlomo Hareli, should be acknowledged in any manuscript originating from projects using the stimulus set via the following reference:</p>
+
+                    <p style="margin-left: 2rem; font-style: italic;">Hareli, S., Elkabetz, S., & Hess, U. (2019). Drawing inferences from emotion expressions: The role of situative informativeness and context. <em>Emotion</em>, 19, 200-208. doi: 10.1037/emo0000368</p>
+
+                    <p>One electronic copy of any manuscript resulting from use of the HSFEE stimulus set should be sent to Prof. Hareli Shlomo at: <strong>shareli@univ.haifa.ac.il</strong></p>
+                </div>
+
+                <h3>Data Security</h3>
+                <div class="dataset-card">
+                    <p>In order to download the HSFEE, you will be asked for your name, institutional affiliation, and your email address. This data will be saved and is necessary in order to contact you and to send you a download link to the HSFEE. The data will not be used for any other purpose.</p>
+
+                    <p>If you do not complete the download form, no data will be saved.</p>
+
+                    <p>By marking the "Terms of use" below, you signal your agreement with this use of your data.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Body Weight and Expressions of Emotions - AI-Generated Images Datasets</h2>
+
+                <div class="dataset-card">
+                    <h3>Version 1</h3>
+                    <p>This dataset includes <strong>72 high-quality images</strong> of individuals from the chest up, generated using ComfyUI and enhanced with the fluxi-dev model. The images represent diverse body types (fit, middleweight, obese) and emotional expressions (happiness, sadness, neutrality) across genders.</p>
+
+                    <p>Each image was meticulously analyzed and edited to ensure an accurate representation of emotions, with a <strong>validation criterion of at least 95% likelihood of the desired emotion</strong>. The final dataset features images of four different men and women, each expressing the specified emotions.</p>
+
+                    <p>Additionally, it includes the results of an analysis using Py-Feat, detailing the likelihood of the emotion shown and the specific Action Units (AUs) detected.</p>
+
+                    <p><a href="#" class="btn">Access Version 1 Dataset</a></p>
+                </div>
+
+                <div class="dataset-card">
+                    <h3>Version 2</h3>
+                    <p>This dataset includes <strong>96 high-quality images</strong> of individuals from the chest up, generated using ComfyUI and enhanced with the fluxi-dev model. The images represent diverse body types (fit, middleweight, obese) and emotional expressions (happiness, sadness, anger, and neutrality) across genders.</p>
+
+                    <p>Each image was meticulously analyzed and edited to ensure an accurate representation of emotions, with a <strong>validation criterion of at least 95% likelihood of the desired emotion</strong>. The final dataset features images of four different men and women, each expressing all four emotions.</p>
+
+                    <p>Additionally, it includes the results of an analysis using Py-Feat, detailing the likelihood of the emotion shown and the specific Action Units (AUs) detected.</p>
+
+                    <p><a href="#" class="btn">Access Version 2 Dataset</a></p>
+                </div>
+
+                <h3>Dataset Features</h3>
+                <ul>
+                    <li><strong>High Resolution Images:</strong> Professional quality images suitable for research and publication</li>
+                    <li><strong>Diverse Body Types:</strong> Representation of fit, middleweight, and obese body compositions</li>
+                    <li><strong>Multiple Emotional Expressions:</strong> Comprehensive coverage of key emotional states</li>
+                    <li><strong>Gender Diversity:</strong> Both male and female participants represented equally</li>
+                    <li><strong>Validated Emotions:</strong> All images meet 95% validation threshold for emotion accuracy</li>
+                    <li><strong>Action Unit Analysis:</strong> Detailed Py-Feat analysis of facial action units for scientific validation</li>
+                    <li><strong>AI-Generated:</strong> Created using advanced AI models (ComfyUI with fluxi-dev) for consistency and quality</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Using These Datasets</h2>
+                <div class="highlight">
+                    <p>These datasets are valuable research resources for studying the relationship between emotional expressions, body characteristics, and social perception. They can be used for:</p>
+                    <ul>
+                        <li>Understanding how body weight influences perception of emotions</li>
+                        <li>Investigating the relationship between body type and attribution of personality traits</li>
+                        <li>Developing and testing emotion recognition algorithms</li>
+                        <li>Cross-cultural emotion perception studies</li>
+                        <li>Training machine learning models for emotion detection</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
     </div>
 
     <footer>
-        <p>&copy; 2026 Prof. Shlomo Hareli. All rights reserved.</p>
+        <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
+        <p>Laboratory for the Study of Social Perception of Emotions</p>
+        <p>Department of Business Administration, Faculty of Management</p>
     </footer>
 </body>
 </html>
