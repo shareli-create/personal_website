@@ -1,0 +1,59 @@
+HOW TO ADD YOUR PHOTO
+======================
+
+Option 1: Add Photo File (Easiest)
+-----------------------------------
+1. Find a professional photo of yourself
+2. Save it as: profile-photo.jpg
+3. Upload it to your GitHub repo (same place as the other files)
+4. Done! It will appear on your home page
+
+Requirements:
+- File name: profile-photo.jpg (exactly)
+- Format: JPG or PNG (rename to .jpg if PNG)
+- Recommended size: 500x500 pixels or larger
+- Professional headshot works best
+
+
+Option 2: Use Photo from Another Website
+-----------------------------------------
+If your photo is already hosted elsewhere (Google Drive, university website, etc.):
+
+1. Get the direct image URL
+2. Open index.html in a text editor
+3. Find this line (around line 32):
+   <img src="profile-photo.jpg" alt="Prof. Shlomo Hareli" class="profile-photo">
+
+4. Replace "profile-photo.jpg" with your full image URL:
+   <img src="https://your-photo-url-here.jpg" alt="Prof. Shlomo Hareli" class="profile-photo">
+
+5. Save and re-upload index.html to GitHub
+
+
+Option 3: No Photo (Remove Photo Section)
+------------------------------------------
+If you prefer no photo:
+
+1. Open index.html
+2. Delete lines 31-41 (the entire profile-section div)
+3. Keep just the about-box with your text
+4. Save and re-upload
+
+
+NEED HELP GETTING YOUR PHOTO URL?
+==================================
+
+From Google Drive:
+1. Upload photo to Google Drive
+2. Right-click → Share → Change to "Anyone with the link"
+3. Copy the link
+4. Use that URL in index.html
+
+From University Website:
+1. Right-click on your photo on the university site
+2. Select "Copy image address"
+3. Use that URL in index.html
+
+
+Your site currently expects: profile-photo.jpg
+Upload that file to GitHub alongside your other files!

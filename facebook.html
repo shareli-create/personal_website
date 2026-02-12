@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Shlomo Hareli - My Facebook Group</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #67B8E3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 3px;
+        }
+        .dropdown-content a:hover {
+            background-color: #f0e6ff;
+            color: #4A90E2;
+        }
+        nav li.dropdown > a:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
+        .talk-item {
+            background: #f9fafb;
+            border-left: 4px solid #67B8E3;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+        .talk-title {
+            color: #4A90E2;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .talk-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .group-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #4A90E2 0%, #67B8E3 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Prof. Shlomo Hareli</h1>
+            <p>Social Psychologist | University of Haifa</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li class="dropdown">
+                    <a href="#">More</a>
+                    <div class="dropdown-content">
+                        <a href="news.html">In the News and on the Web</a>
+                        <a href="posters.html">Posters at Conferences</a>
+                        <a href="presentations.html">Invited Presentations</a>
+                        <a href="facebook.html">My Facebook Group</a>
+                        <a href="accessibility.html">Accessibility Statement</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section>
+                <h1>My Facebook Group</h1>
+                <div class="group-badge">Closed Group for Students and Colleagues</div>
+                <p>I maintain a closed Facebook group dedicated to sharing research updates, academic discussions, and engaging content related to social psychology and emotions.</p>
+            </section>
+
+            <section>
+                <h2>Group Description</h2>
+                <p>A closed group of former students of mine as well as interested friends and colleagues who receive news about my own research, but mainly about new research in social psychology and related fields as well as talks from leading scholars in the field. Members can post relevant information and ask questions about these topics.</p>
+                <p>The group serves as a collaborative space where members stay informed about:</p>
+                <ul>
+                    <li>Recent research findings from Prof. Hareli's laboratory</li>
+                    <li>New publications in social psychology and emotion research</li>
+                    <li>Invited presentations and talks from leading scholars</li>
+                    <li>Discussions and questions related to emotion perception and social psychology</li>
+                    <li>Relevant academic and professional updates</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Featured Talks and Presentations in the Group</h2>
+                <p>Below are selected talks and presentations that have been featured and discussed within the group:</p>
+
+                <div class="talk-item">
+                    <div class="talk-title">Emotional Intelligence: From Theory to Everyday Practice</div>
+                    <div class="talk-description">Discussion of how emotional intelligence concepts translate to real-world applications in personal and professional life.</div>
+                </div>
+
+                <div class="talk-item">
+                    <div class="talk-title">The Lethality of Loneliness: John Cacioppo</div>
+                    <div class="talk-description">Featuring research on the profound health impacts of loneliness and social isolation, and the biological mechanisms underlying social connection.</div>
+                </div>
+
+                <div class="talk-item">
+                    <div class="talk-title">Dunning-Kruger Effect</div>
+                    <div class="talk-description">Analysis of the cognitive bias where people with limited knowledge or competence overestimate their abilities, and its implications for social judgment.</div>
+                </div>
+
+                <div class="talk-item">
+                    <div class="talk-title">Secrets of Attraction – A Talk by Prof. Karl Grammer</div>
+                    <div class="talk-description">Insights into the psychological and behavioral factors that influence human attraction and mate selection.</div>
+                </div>
+
+                <div class="talk-item">
+                    <div class="talk-title">Science of Persuasion</div>
+                    <div class="talk-description">Exploration of the psychological principles underlying effective persuasion and influence in communication and decision-making.</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>How to Join</h2>
+                <p>This is a closed, invite-only group designed for:</p>
+                <ul>
+                    <li>Former graduate and undergraduate students</li>
+                    <li>Colleagues and collaborators in the field</li>
+                    <li>Researchers interested in social psychology and emotions</li>
+                    <li>Friends with shared interests in academic discussions</li>
+                </ul>
+                <p>If you are interested in joining the group, please contact Prof. Hareli directly at <strong>shareli@univ.haifa.ac.il</strong>.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
+        <p>Laboratory for the Study of Social Perception of Emotions</p>
+        <p>Department of Business Administration, Faculty of Management</p>
+    </footer>
+</body>
+</html>
