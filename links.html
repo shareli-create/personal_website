@@ -22,9 +22,7 @@
             top: 100%;
             left: 0;
         }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+        
         .dropdown-content a {
             color: #67B8E3;
             padding: 12px 16px;
@@ -144,5 +142,42 @@
         <p>Laboratory for the Study of Social Perception of Emotions</p>
         <p>Department of Business Administration, Faculty of Management</p>
     </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownButtons = document.querySelectorAll('.dropdown button');
+    
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            const menu = this.nextElementSibling;
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle menu
+            this.setAttribute('aria-expanded', !isExpanded);
+            menu.style.display = isExpanded ? 'none' : 'block';
+        });
+        
+        // Close on Escape key
+        button.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const menu = this.nextElementSibling;
+                this.setAttribute('aria-expanded', 'false');
+                menu.style.display = 'none';
+            }
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown button').forEach(button => {
+                button.setAttribute('aria-expanded', 'false');
+                button.nextElementSibling.style.display = 'none';
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
