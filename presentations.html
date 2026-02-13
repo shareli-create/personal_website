@@ -52,6 +52,18 @@
             font-weight: 600;
             margin-bottom: 0.3rem;
         }
+            nav li.dropdown > button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav li.dropdown > button:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -69,14 +81,15 @@
                 <li><a href="datasets.html">Datasets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="links.html">Links</a></li>
+                
                 <li class="dropdown">
-                    <a href="#">More</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">In the News and on the Web</a>
-                        <a href="posters.html">Posters at Conferences</a>
-                        <a href="presentations.html">Invited Presentations</a>
-                        <a href="facebook.html">My Facebook Group</a>
-                        <a href="accessibility.html">Accessibility Statement</a>
+                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
+                    <div class="dropdown-content" role="menu">
+                        <a href="news.html" role="menuitem">In the News and on the Web</a>
+                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
+                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
+                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
+                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
                     </div>
                 </li>
             </ul>

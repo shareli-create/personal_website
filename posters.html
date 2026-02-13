@@ -62,6 +62,18 @@
             color: #666;
             font-size: 0.95rem;
         }
+            nav li.dropdown > button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav li.dropdown > button:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -79,14 +91,15 @@
                 <li><a href="datasets.html">Datasets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="links.html">Links</a></li>
+                
                 <li class="dropdown">
-                    <a href="#">More</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">In the News and on the Web</a>
-                        <a href="posters.html">Posters at Conferences</a>
-                        <a href="presentations.html">Invited Presentations</a>
-                        <a href="facebook.html">My Facebook Group</a>
-                        <a href="accessibility.html">Accessibility Statement</a>
+                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
+                    <div class="dropdown-content" role="menu">
+                        <a href="news.html" role="menuitem">In the News and on the Web</a>
+                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
+                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
+                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
+                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
                     </div>
                 </li>
             </ul>
@@ -98,14 +111,11 @@
             <section>
                 <h1>Posters Presented at Conferences</h1>
                 <p>Below is a selection of poster presentations from major academic conferences and events where Prof. Hareli and colleagues have shared their research findings.</p>
-                <p style="background: #e3f2fd; border-left: 4px solid #2196F3; padding: 1rem; margin: 1rem 0; border-radius: 4px;">
-                    <strong>Access Poster PDFs:</strong> To download or view poster files, please visit the 
-                    <a href="https://sites.google.com/view/prof-shlomo-hareli/posters-2" target="_blank" style="color: #1976D2; font-weight: 600;">posters archive page</a>.
-                </p>
+                <p style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 1rem 0; border-radius: 4px;"><strong>Note:</strong> PDF downloads for conference posters are temporarily unavailable. For access to specific poster files, please contact Prof. Hareli at <a href="/cdn-cgi/l/email-protection#23504b4251464f4a63564d4a550d4b424a45420d42400d4a4f"><span class="__cf_email__" data-cfemail="1b68737a697e77725b6e75726d35737a727d7a357a78357277">[email&#160;protected]</span></a></p>
             </section>
 
             <section>
-                <h2>Conference Poster Presentations</h2>
+                <h2>Poster Presentations by Conference</h2>
 
                 <div class="poster">
                     <div class="poster-conference">18th General Meeting of the European Association of Social Psychology</div>
@@ -130,36 +140,6 @@
                     <div class="poster-authors"><strong>Presenter:</strong> Shlomo Hareli</div>
                     <p style="margin-top: 0.8rem; margin-bottom: 0; font-size: 0.95rem;">This research explored how facial expressions of emotions influence observers' judgments about a person's health status and well-being, contributing to understanding of non-verbal communication in health and medical contexts.</p>
                 </div>
-
-                <div class="poster">
-                    <div class="poster-conference">International Society for Research on Emotion</div>
-                    <div style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;">Location/Year (details from archive)</div>
-                    <div class="poster-title">"The influence of perceived appropriateness of emotion expressions on social perception of expressers and the object of the emotion"</div>
-                    <div class="poster-authors"><strong>Presenter:</strong> Shlomo Hareli</div>
-                </div>
-
-                <div class="poster">
-                    <div class="poster-conference">International Society for Research on Emotion</div>
-                    <div style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;">Amsterdam, 2019</div>
-                    <div class="poster-title">"The perceived social power of expressers of pride"</div>
-                    <div class="poster-authors"><strong>Presenter:</strong> Shlomo Hareli</div>
-                </div>
-
-                <div class="poster">
-                    <div class="poster-conference">19th General Meeting of the European Association of Social Psychology</div>
-                    <div style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;">Krakow, 2023</div>
-                    <div class="poster-authors"><strong>Presenter:</strong> Shlomo Hareli</div>
-                </div>
-            </section>
-
-            <section>
-                <h2>Invited Talks</h2>
-                <p>In addition to poster presentations, Prof. Hareli has delivered invited talks on topics including:</p>
-                <ul>
-                    <li>Crowdsourcing in research methodology</li>
-                    <li>Social perception of emotions (presentation at Goldfarb, Haifa)</li>
-                </ul>
-                <p>Talk slides are available on the <a href="https://sites.google.com/view/prof-shlomo-hareli/posters-2" target="_blank">archive page</a>.</p>
             </section>
 
             <section>
@@ -178,8 +158,4 @@
 
     <footer>
         <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
-        <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>School of Business Administration, The Herta & Paul Amir Faculty of Social Sciences</p>
-    </footer>
-</body>
-</html>
+        <p>Laboratory for the Stud

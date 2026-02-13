@@ -40,6 +40,18 @@
             content: " ▼";
             font-size: 0.8rem;
         }
+            nav li.dropdown > button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav li.dropdown > button:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -57,14 +69,15 @@
                 <li><a href="datasets.html">Datasets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="links.html">Links</a></li>
+                
                 <li class="dropdown">
-                    <a href="#">More</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">In the News and on the Web</a>
-                        <a href="posters.html">Posters at Conferences</a>
-                        <a href="presentations.html">Invited Presentations</a>
-                        <a href="facebook.html">My Facebook Group</a>
-                        <a href="accessibility.html">Accessibility Statement</a>
+                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
+                    <div class="dropdown-content" role="menu">
+                        <a href="news.html" role="menuitem">In the News and on the Web</a>
+                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
+                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
+                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
+                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
                     </div>
                 </li>
             </ul>
@@ -91,13 +104,13 @@
 
                     <p><strong>Copyright holder:</strong> Laboratory for the Study of Social Perception of Emotions, the University of Haifa, Haifa Israel.</p>
 
-                    <p>In order to use the stimuli for purposes of illustration in conferences or manuscripts, consent from the authors of the HSFEE must be obtained. Please contact Prof. Hareli Shlomo at: <strong>shareli@univ.haifa.ac.il</strong></p>
+                    <p>In order to use the stimuli for purposes of illustration in conferences or manuscripts, consent from the authors of the HSFEE must be obtained. Please contact Prof. Hareli Shlomo at: <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="74071c150611181d34011a1d025a1c151d12155a15175a1d18">[email&#160;protected]</a></strong></p>
 
                     <p><strong>Required Attribution:</strong> The creators of the set, Dr. Shimon Elkabetz, Prof. Ursula Hess and Prof. Shlomo Hareli, should be acknowledged in any manuscript originating from projects using the stimulus set via the following reference:</p>
 
                     <p style="margin-left: 2rem; font-style: italic;">Hareli, S., Elkabetz, S., & Hess, U. (2019). Drawing inferences from emotion expressions: The role of situative informativeness and context. <em>Emotion</em>, 19, 200-208. doi: 10.1037/emo0000368</p>
 
-                    <p>One electronic copy of any manuscript resulting from use of the HSFEE stimulus set should be sent to Prof. Hareli Shlomo at: <strong>shareli@univ.haifa.ac.il</strong></p>
+                    <p>One electronic copy of any manuscript resulting from use of the HSFEE stimulus set should be sent to Prof. Hareli Shlomo at: <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f88b90998a9d9491b88d96918ed69099919e99d6999bd69194">[email&#160;protected]</a></strong></p>
                 </div>
 
                 <h3>Data Security</h3>
@@ -124,7 +137,7 @@
 
                     <p>Additionally, it includes the results of an analysis using Py-Feat, detailing the likelihood of the emotion shown and the specific Action Units (AUs) detected.</p>
 
-                    <p><a href="https://drive.google.com/drive/folders/1Rg3NzdbkGGvcZoNGEhnz0SM0Jt9Xp-lA?usp=drive_link" target="_blank" class="btn">Access Version 1 Dataset</a></p>
+                    <p><a href="https://drive.google.com/drive/folders/1Rg3NzdbkGGvcZoNGEhnz0SM0Jt9Xp-lA?usp=sharing" target="_blank" class="btn">Access Version 1 Dataset</a></p>
                 </div>
 
                 <div class="dataset-card">
@@ -135,7 +148,7 @@
 
                     <p>Additionally, it includes the results of an analysis using Py-Feat, detailing the likelihood of the emotion shown and the specific Action Units (AUs) detected.</p>
 
-                    <p><a href="https://drive.google.com/drive/folders/1t6pT5mlwFEa_WYz8ayxDuCNqSZWIlrd3?usp=drive_link" target="_blank" class="btn">Access Version 2 Dataset</a></p>
+                    <p><a href="https://drive.google.com/drive/folders/1t6pT5mlwFEa_WYz8ayxDuCNqSZWIlrd3?usp=sharing" target="_blank" class="btn">Access Version 2 Dataset</a></p>
                 </div>
 
                 <h3>Dataset Features</h3>
@@ -166,10 +179,4 @@
         </main>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
-        <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>School of Business Administration, The Herta & Paul Amir Faculty of Social Sciences</p>
-    </footer>
-</body>
-</html>
+    <fo

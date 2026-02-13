@@ -40,6 +40,18 @@
             content: " ▼";
             font-size: 0.8rem;
         }
+            nav li.dropdown > button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav li.dropdown > button:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -57,14 +69,15 @@
                 <li><a href="datasets.html">Datasets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="links.html">Links</a></li>
+                
                 <li class="dropdown">
-                    <a href="#">More</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">In the News and on the Web</a>
-                        <a href="posters.html">Posters at Conferences</a>
-                        <a href="presentations.html">Invited Presentations</a>
-                        <a href="facebook.html">My Facebook Group</a>
-                        <a href="accessibility.html">Accessibility Statement</a>
+                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
+                    <div class="dropdown-content" role="menu">
+                        <a href="news.html" role="menuitem">In the News and on the Web</a>
+                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
+                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
+                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
+                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
                     </div>
                 </li>
             </ul>
@@ -82,42 +95,42 @@
                 <h2>Featured Topics and Articles</h2>
 
                 <div class="news-item">
-                    <h3><a href="https://www.jpost.com/Health-and-Sci-Tech/Health/Health-Scan-Abandoned-doctors-feel-slighted" target="_blank">Abandoned Doctors Felt Slighted</a></h3>
+                    <h3>Abandoned Doctors Felt Slighted</h3>
                     <p>Coverage and discussion of research on how emotional expressions in doctor-patient relationships impact perceptions and outcomes.</p>
                 </div>
 
                 <div class="news-item">
-                    <h3><a href="https://en.wikipedia.org/wiki/Social_emotions" target="_blank">Social Emotions</a></h3>
+                    <h3>Social Emotions</h3>
                     <p>Featured articles discussing the nature and function of social emotions in interpersonal and organizational contexts.</p>
                 </div>
 
                 <div class="news-item">
-                    <h3><a href="https://www.bps.org.uk/research-digest/when-scowl" target="_blank">When to Scowl</a></h3>
+                    <h3>When to Scowl</h3>
                     <p>Research findings on how anger expressions influence credibility and social perceptions, challenging conventional wisdom about emotion display.</p>
                 </div>
 
                 <div class="news-item">
-                    <h3><a href="https://bodylanguageproject.com/articles/dominance-expression-conveyed-different-facial-expressions-men-women/" target="_blank">Dominance Expression Conveyed By Different Facial Expressions In Men And Women</a></h3>
+                    <h3>Dominance Expression Conveyed By Different Facial Expressions In Men And Women</h3>
                     <p>Examination of how gender influences the perception of dominance and social power based on emotional expressions.</p>
                 </div>
 
                 <div class="news-item">
-                    <h3><a href="https://www.psychologicalscience.org/news/minds-business/failure-emotions-and-explaining-it-to-your-boss.html" target="_blank">Failure, Emotions, and Explaining It to Your Boss</a></h3>
+                    <h3>Failure, Emotions, and Explaining It to Your Boss</h3>
                     <p>Coverage of research on how emotional expressions affect the effectiveness of explanations for failure in workplace settings.</p>
                 </div>
 
                 <div class="news-item">
-                    <h3><a href="https://psmag.com/social-justice/emotionally-restrained-women-viewed-as-less-intelligent/" target="_blank">Emotionally Restrained Women Are Seen as Less Intelligent I</a></h3>
+                    <h3>Emotionally Restrained Women Are Seen as Less Intelligent I</h3>
                     <p>First in a series examining gender stereotypes and how emotional restraint affects perceptions of competence and intelligence.</p>
                 </div>
 
                 <div class="news-item">
-                    <h3><a href="https://archive.thinkprogress.org/women-who-show-emotional-restraint-are-seen-as-less-intelligent-fakers-8d7652115b84/" target="_blank">Emotionally Restrained Women Are Viewed as Less Intelligent II</a></h3>
+                    <h3>Emotionally Restrained Women Are Viewed as Less Intelligent II</h3>
                     <p>Follow-up research confirming the paradoxical effect of emotional restraint on competence perceptions across different contexts.</p>
                 </div>
 
                 <div class="news-item">
-                    <h3><a href="https://www.growkudos.com/publications/10.1037%25252Femo0000368/reader" target="_blank">Defining Excuses</a></h3>
+                    <h3>Defining Excuses</h3>
                     <p>Discussion of how people explain failures and the role that emotional expression plays in the credibility of these accounts.</p>
                 </div>
 
@@ -127,7 +140,7 @@
                 </div>
 
                 <div class="news-item">
-                    <h3><a href="https://spsp.org/news-center/character-context-blog/how-decide-who-will-help-us" target="_blank">How to Decide Who Will Help Us?</a></h3>
+                    <h3>How to Decide Who Will Help Us?</h3>
                     <p>Research on how emotional expressions and facial features influence perceptions of helpfulness and the likelihood of receiving social support.</p>
                 </div>
             </section>
@@ -143,7 +156,7 @@
     <footer>
         <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
         <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>School of Business Administration, The Herta & Paul Amir Faculty of Social Sciences</p>
+        <p>Department of Business Administration, Faculty of Management</p>
     </footer>
 </body>
 </html>

@@ -40,6 +40,18 @@
             content: " ▼";
             font-size: 0.8rem;
         }
+        nav li.dropdown > button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav li.dropdown > button:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -58,12 +70,13 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="links.html">Links</a></li>
                 <li class="dropdown">
-                    <a href="#">More</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">In the News and on the Web</a>
-                        <a href="posters.html">Posters at Conferences</a>
-                        <a href="presentations.html">Invited Presentations</a>
-                        <a href="accessibility.html">Accessibility Statement</a>
+                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
+                    <div class="dropdown-content" role="menu">
+                        <a href="news.html" role="menuitem">In the News and on the Web</a>
+                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
+                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
+                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
+                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
                     </div>
                 </li>
             </ul>
@@ -78,7 +91,7 @@
                     <img src="profile-photo.jpg" alt="Prof. Shlomo Hareli" class="profile-photo">
                     <div class="profile-text">
                         <div class="about-box">
-                            <p><strong>Professor Shlomo Hareli</strong> is a social psychologist focused on studying emotions at the University of Haifa's School of Business Administration. He serves as the Head of the Laboratory for the Study of Social Perception of Emotions and holds a faculty appointment as a Professor in the School of Business Administration.</p>
+                            <p><strong>Professor Shlomo Hareli</strong> is a social psychologist focused on studying emotions at the University of Haifa's School of Business Administration. He serves as the Head of the Laboratory for the Study of Social Perception of Emotions and holds a faculty appointment as a Professor in the Department of Business Administration.</p>
 
                             <p>His research program aims to reveal mysteries around the social communication function of emotions, with work conducted by his laboratory spanning diverse research topics and extensive empirical investigations.</p>
                         </div>
@@ -126,24 +139,24 @@
                 </div>
             </section>
 
-   <section>
-    <h2>External Profiles and Links</h2>
-    <ul class="no-indent">
-        <li><a href="https://en.wikipedia.org/wiki/Shlomo_Hareli" target="_blank">My Wikipedia Page</a></li>
-        <li><a href="https://orcid.org/0000-0002-3101-868X" target="_blank">My ORCID Profile</a></li>
-        <li><a href="https://scholar.google.co.il/citations?user=uIs135cAAAAJ&hl=en" target="_blank">My Google Scholar Profile</a></li>
-        <li><a href="https://scholarometer.indiana.edu/#author;uIs135cAAAAJ;0" target="_blank">Scholarometer</a></li>
-        <li><a href="https://profiles.impactstory.org/u/0000-0002-3101-868X" target="_blank">My ImpactStory Profile</a></li>
-        <li><a href="https://harelichat.netlify.app/" target="_blank">Hareli's ChatBot</a></li>
-    </ul>
-</section>
+            <section>
+                <h2>External Profiles and Links</h2>
+                <ul class="no-indent">
+                    <li><a href="#">My Wikipedia Page</a></li>
+                    <li><a href="#">My ORCID Profile</a></li>
+                    <li><a href="#">My Google Scholar Profile</a></li>
+                    <li><a href="#">Scholarometer</a></li>
+                    <li><a href="#">My ImpactStory Profile</a></li>
+                    <li><a href="#">Hareli's ChatBot</a></li>
+                </ul>
+            </section>
         </main>
     </div>
 
     <footer>
         <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
         <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>School of Business Administration, The Herta & Paul Amir Faculty of Social Sciences</p>
+        <p>Department of Business Administration, Faculty of Management</p>
     </footer>
 </body>
 </html>

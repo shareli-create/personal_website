@@ -66,6 +66,18 @@
             margin-bottom: 1.5rem;
             font-weight: 500;
         }
+            nav li.dropdown > button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav li.dropdown > button:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -83,14 +95,15 @@
                 <li><a href="datasets.html">Datasets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="links.html">Links</a></li>
+                
                 <li class="dropdown">
-                    <a href="#">More</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">In the News and on the Web</a>
-                        <a href="posters.html">Posters at Conferences</a>
-                        <a href="presentations.html">Invited Presentations</a>
-                        <a href="facebook.html">My Facebook Group</a>
-                        <a href="accessibility.html">Accessibility Statement</a>
+                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
+                    <div class="dropdown-content" role="menu">
+                        <a href="news.html" role="menuitem">In the News and on the Web</a>
+                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
+                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
+                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
+                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
                     </div>
                 </li>
             </ul>
@@ -157,15 +170,11 @@
                     <li>Researchers interested in social psychology and emotions</li>
                     <li>Friends with shared interests in academic discussions</li>
                 </ul>
-                <p>If you are interested in joining the group, please contact Prof. Hareli directly at <strong>shareli@univ.haifa.ac.il</strong>.</p>
+                <p>If you are interested in joining the group, please contact Prof. Hareli directly at <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f1c070e1d0a03062f1a01061941070e06090e410e0c410603">[email&#160;protected]</a></strong>.</p>
             </section>
         </main>
     </div>
 
     <footer>
         <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
-        <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>Department of Business Administration, Faculty of Management</p>
-    </footer>
-</body>
-</html>
+        <p>Laboratory for the Study of Social Percep

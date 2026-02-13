@@ -40,6 +40,18 @@
             content: " ▼";
             font-size: 0.8rem;
         }
+            nav li.dropdown > button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav li.dropdown > button:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -57,14 +69,15 @@
                 <li><a href="datasets.html">Datasets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="links.html">Links</a></li>
+                
                 <li class="dropdown">
-                    <a href="#">More</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">In the News and on the Web</a>
-                        <a href="posters.html">Posters at Conferences</a>
-                        <a href="presentations.html">Invited Presentations</a>
-                        <a href="facebook.html">My Facebook Group</a>
-                        <a href="accessibility.html">Accessibility Statement</a>
+                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
+                    <div class="dropdown-content" role="menu">
+                        <a href="news.html" role="menuitem">In the News and on the Web</a>
+                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
+                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
+                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
+                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
                     </div>
                 </li>
             </ul>
@@ -78,49 +91,49 @@
             <section>
                 <h2>Professional Organizations</h2>
                 <ul class="no-indent">
-                    <li><a href="https://www.isre.org/" target="_blank">The International Society of Research on Emotion</a> - Premier organization for emotion research scientists worldwide</li>
-                    <li><a href="https://www.socialpsychology.org/" target="_blank">Social Psychology Network</a> - Comprehensive directory of social psychology resources and researchers</li>
+                    <li><a href="#">The International Society of Research on Emotion</a> - Premier organization for emotion research scientists worldwide</li>
+                    <li><a href="#">Social Psychology Network</a> - Comprehensive directory of social psychology resources and researchers</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Research and Academic Resources</h2>
                 <ul class="no-indent">
-                    <li><a href="https://scholar.google.com/" target="_blank">Google Scholar</a> - Access to academic publications and citation metrics</li>
-                    <li><a href="https://www.researchgate.net/" target="_blank">ResearchGate</a> - Collaborative platform for researchers to share publications and collaborate</li>
+                    <li><a href="#">Google Scholar</a> - Access to academic publications and citation metrics</li>
+                    <li><a href="#">ResearchGate</a> - Collaborative platform for researchers to share publications and collaborate</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Researcher Profiles and Impact Metrics</h2>
                 <ul class="no-indent">
-                    <li><a href="https://www.growkudos.com/" target="_blank">KUDOS</a> - Platform for explaining research impact to broader audiences</li>
-                    <li><a href="https://impactstory.org/" target="_blank">ImpactStory</a> - Tracking and measuring research impact</li>
+                    <li><a href="#">KUDOS</a> - Platform for explaining research impact to broader audiences</li>
+                    <li><a href="#">ImpactStory</a> - Tracking and measuring research impact</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Additional Resources</h2>
                 <ul class="no-indent">
-                    <li><a href="https://www.cedaradvisers.com/" target="_blank">Cedar Advisers</a> - Professional consulting services for researchers and academics</li>
-                    <li><a href="https://betterposters.blogspot.com/" target="_blank">How to Create a Better Poster</a> - Guide to designing effective research posters for conferences</li>
+                    <li><a href="#">Cedar Advisers</a> - Professional consulting services for researchers and academics</li>
+                    <li><a href="#">How to Create a Better Poster</a> - Guide to designing effective research posters for conferences</li>
                 </ul>
             </section>
 
             <section>
                 <h2>My Academic Profiles</h2>
                 <ul class="no-indent">
-                    <li><a href="https://en.wikipedia.org/wiki/Shlomo_Hareli" target="_blank">Wikipedia Page: Prof. Shlomo Hareli</a> - Biographical information on Wikipedia</li>
-                    <li><a href="https://orcid.org/0000-0002-3101-868X" target="_blank">ORCID Profile</a> - Unique identifier for researcher publications</li>
-                    <li><a href="https://scholar.google.co.il/citations?user=uIs135cAAAAJ&hl=en" target="_blank">Google Scholar Profile</a> - Citation metrics and publication record</li>
-                    <li><a href="https://scholarometer.indiana.edu/#author;uIs135cAAAAJ;0" target="_blank">Scholarometer Profile</a> - Research impact assessment</li>
+                    <li><a href="#">Wikipedia Page: Prof. Shlomo Hareli</a> - Biographical information on Wikipedia</li>
+                    <li><a href="#">ORCID Profile</a> - Unique identifier for researcher publications</li>
+                    <li><a href="#">Google Scholar Profile</a> - Citation metrics and publication record</li>
+                    <li><a href="#">Scholarometer Profile</a> - Research impact assessment</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Additional Tools</h2>
                 <ul class="no-indent">
-                    <li><a href="https://harelichat.netlify.app/" target="_blank">Hareli's ChatBot</a> - Interactive AI tool for discussing emotion research and related topics</li>
+                    <li><a href="#">Hareli's ChatBot</a> - Interactive AI tool for discussing emotion research and related topics</li>
                 </ul>
             </section>
         </main>
@@ -129,7 +142,7 @@
     <footer>
         <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
         <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>School of Business Administration, The Herta & Paul Amir Faculty of Social Sciences</p>
+        <p>Department of Business Administration, Faculty of Management</p>
     </footer>
 </body>
 </html>

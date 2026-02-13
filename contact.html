@@ -40,6 +40,18 @@
             content: " ▼";
             font-size: 0.8rem;
         }
+            nav li.dropdown > button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav li.dropdown > button:after {
+            content: " ▼";
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -57,14 +69,15 @@
                 <li><a href="datasets.html">Datasets</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="links.html">Links</a></li>
+                
                 <li class="dropdown">
-                    <a href="#">More</a>
-                    <div class="dropdown-content">
-                        <a href="news.html">In the News and on the Web</a>
-                        <a href="posters.html">Posters at Conferences</a>
-                        <a href="presentations.html">Invited Presentations</a>
-                        <a href="facebook.html">My Facebook Group</a>
-                        <a href="accessibility.html">Accessibility Statement</a>
+                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
+                    <div class="dropdown-content" role="menu">
+                        <a href="news.html" role="menuitem">In the News and on the Web</a>
+                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
+                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
+                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
+                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
                     </div>
                 </li>
             </ul>
@@ -79,8 +92,8 @@
                 <h2>Mailing Address</h2>
                 <div class="contact-info">
                     <strong>Prof. Shlomo Hareli</strong>
-                    <p>School of Business Administration</p>
-                    <p>The Herta & Paul Amir Faculty of Social Sciences</p>
+                    <p>Department of Business Administration</p>
+                    <p>Faculty of Management</p>
                     <p>University of Haifa</p>
                     <p>199 Aba Khoushy Ave., Mount Carmel</p>
                     <p>Haifa, 3498838</p>
@@ -91,15 +104,15 @@
             <section>
                 <h2>Office Location</h2>
                 <div class="contact-info">
-                    <strong>Rabin's Building – Room 9136</strong>
+                    <strong>Jacob's Building – Room 618</strong>
                 </div>
             </section>
 
             <section>
                 <h2>Email Addresses</h2>
                 <div class="contact-info">
-                    <p><strong>University Email:</strong> shareli@univ.haifa.ac.il</p>
-                    <p><strong>Personal Email:</strong> shlomo.hareli@gmail.com</p>
+                    <p><strong>University Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c1f040d1e0900052c1902051a42040d050a0d420d0f420500">[email&#160;protected]</a></p>
+                    <p><strong>Personal Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abd8c3c7c4c6c485c3cad9cec7c2ebccc6cac2c785c8c4c6">[email&#160;protected]</a></p>
                 </div>
             </section>
 
@@ -117,13 +130,16 @@
                 </div>
             </section>
 
-                   </main>
+            <section>
+                <h2>Laboratory</h2>
+                <div class="contact-info">
+                    <p><strong>Laboratory for the Study of Social Perception of Emotions</strong></p>
+                    <p>Department of Business Administration</p>
+                    <p>Faculty of Management</p>
+                    <p>University of Haifa</p>
+                </div>
+            </section>
+        </main>
     </div>
 
-     <footer>
-        <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
-        <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>School of Business Administration, The Herta & Paul Amir Faculty of Social Sciences</p>
-    </footer>
-</body>
-</html>
+    <foo
