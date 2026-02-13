@@ -23,16 +23,7 @@
                 <li><a href="contact.html">Contact</a></li>
                 
                 
-                <li class="dropdown">
-                    <button aria-label="More pages menu" aria-expanded="false" aria-haspopup="true">More</button>
-                    <div class="dropdown-content" role="menu">
-                        <a href="news.html" role="menuitem">In the News and on the Web</a>
-                        <a href="posters.html" role="menuitem">Posters at Conferences</a>
-                        <a href="presentations.html" role="menuitem">Invited Presentations</a>
-                        <a href="facebook.html" role="menuitem">My Facebook Group</a>
-                        <a href="accessibility.html" role="menuitem">Accessibility Statement</a>
-                    </div>
-                </li>
+                <li class="dropdown"><a href="#" role="button" aria-label="More pages menu" aria-expanded="false" aria-haspopup="true" onclick="event.preventDefault(); var menu = this.nextElementSibling; var isOpen = menu.style.display === 'block'; menu.style.display = isOpen ? 'none' : 'block'; this.setAttribute('aria-expanded', !isOpen); return false;">More ▼</a><div class="dropdown-content" role="menu" style="display: none;"><a href="news.html" role="menuitem">In the News and on the Web</a><a href="posters.html" role="menuitem">Posters at Conferences</a><a href="presentations.html" role="menuitem">Invited Presentations</a><a href="facebook.html" role="menuitem">My Facebook Group</a><a href="accessibility.html" role="menuitem">Accessibility Statement</a></div></li>
             </ul>
         </nav>
     </header>
@@ -178,42 +169,5 @@
         <p>Laboratory for the Study of Social Perception of Emotions</p>
         <p>Department of Business Administration, Faculty of Management</p>
     </footer>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdownButtons = document.querySelectorAll('.dropdown button');
-    
-    dropdownButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const dropdown = this.parentElement;
-            const menu = this.nextElementSibling;
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            // Toggle menu
-            this.setAttribute('aria-expanded', !isExpanded);
-            menu.style.display = isExpanded ? 'none' : 'block';
-        });
-        
-        // Close on Escape key
-        button.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                const menu = this.nextElementSibling;
-                this.setAttribute('aria-expanded', 'false');
-                menu.style.display = 'none';
-            }
-        });
-    });
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown button').forEach(button => {
-                button.setAttribute('aria-expanded', 'false');
-                button.nextElementSibling.style.display = 'none';
-            });
-        }
-    });
-});
-</script>
 </body>
 </html>
