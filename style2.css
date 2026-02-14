@@ -136,12 +136,17 @@ header p {
 }
 
 .header-tagline {
-    font-size: 0.95rem;
-    margin-top: 0.75rem;
-    opacity: 0.9;
-    font-weight: 400;
-    color: #ccfbf1;
-    letter-spacing: 0.02em;
+    font-size: 0.9rem;
+    margin-top: 0.85rem;
+    font-weight: 500;
+    color: #14b8a6;
+    letter-spacing: 0.05em;
+    background: rgba(20, 184, 166, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border-left: 3px solid #14b8a6;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
