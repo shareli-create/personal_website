@@ -159,15 +159,26 @@
       gap: 0.4rem;
     }
     .hero-links a {
-      font-size: 0.78rem;
-      color: var(--navy-lt);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--navy);
       text-decoration: none;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.4rem;
+      padding: 0.4rem 0.8rem;
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      background: var(--card-bg);
+      transition: all 0.15s;
     }
-    .hero-links a:hover { color: var(--gold); text-decoration: underline; }
-    .hero-links a::before { content: '→'; }
+    .hero-links a:hover {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
 
     .hero-bio h2 {
       font-family: var(--serif);
