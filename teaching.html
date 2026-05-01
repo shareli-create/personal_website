@@ -1,170 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Shlomo Hareli - Teaching</title>
-    <link rel="stylesheet" href="style2.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching – Prof. Shlomo Hareli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:    #1b3256;
+      --navy-lt: #2a4a7a;
+      --gold:    #b8892a;
+      --gold-lt: #d4a63a;
+      --ink:     #1e1e1e;
+      --muted:   #5a5a5a;
+      --border:  #d9d2c5;
+      --bg:      #f7f4ef;
+      --card-bg: #ffffff;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Source Sans 3', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 16px; }
+    .site-header { background: var(--navy); color: white; padding: 1.2rem 0 0; }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 1.4rem; }
+    .header-inner img.logo { height: 54px; width: auto; filter: brightness(0) invert(1); opacity: 0.85; }
+    .header-text h1 { font-family: var(--serif); font-size: 1.65rem; font-weight: 500; letter-spacing: 0.01em; line-height: 1.2; color: #fff; }
+    .header-text .tagline { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-top: 0.2rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    nav { background: var(--navy-lt); margin-top: 1rem; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: stretch; }
+    nav a, .dropdown-btn { display: flex; align-items: center; padding: 0.7rem 1.1rem; font-family: var(--sans); font-size: 0.84rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.8); transition: background 0.15s, color 0.15s; border: none; background: none; cursor: pointer; white-space: nowrap; }
+    nav a:hover, .dropdown-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    nav a.active { background: rgba(255,255,255,0.1); border-bottom: 2px solid var(--gold-lt); color: #fff; }
+    .dropdown { position: relative; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--navy); min-width: 220px; z-index: 100; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-transform: none; letter-spacing: 0; border-top: 1px solid rgba(255,255,255,0.07); }
+    .dropdown-menu a.active { background: rgba(255,255,255,0.1); color: #fff; }
+    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    h1.page-title { font-family: var(--serif); font-size: 2.2rem; font-weight: 500; color: var(--navy); margin-bottom: 0.3rem; }
+    .title-rule { width: 40px; height: 2px; background: var(--gold); margin-bottom: 2rem; }
+    h2.section-h { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; color: var(--navy); margin: 2rem 0 0.8rem; }
+    h3.sub-h { font-family: var(--sans); font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); margin: 1.4rem 0 0.5rem; }
+    p { font-size: 0.98rem; color: #333; line-height: 1.75; margin-bottom: 0.9em; }
+    ul, ol { margin: 0.5em 0 1em 1.5em; }
+    li { font-size: 0.97rem; color: #333; line-height: 1.7; margin-bottom: 0.2em; }
+    a { color: var(--navy-lt); }
+    a:hover { color: var(--gold); }
+    strong { color: var(--ink); }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-top: 3px solid var(--navy); padding: 1.4rem 1.6rem; border-radius: 2px; margin-bottom: 1.2rem; }
+    .card:hover { border-top-color: var(--gold); box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+    .info-box { background: var(--card-bg); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.2rem 1.6rem; border-radius: 0 2px 2px 0; margin-bottom: 1.2rem; }
+    .btn { display: inline-block; padding: 0.5rem 1.2rem; background: var(--navy); color: #fff; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.15s; }
+    .btn:hover { background: var(--navy-lt); color: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+    thead th { background: var(--navy); color: #fff; padding: 0.7rem 1rem; text-align: left; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:hover { background: rgba(27,50,86,0.03); }
+    tbody td { padding: 0.7rem 1rem; vertical-align: top; line-height: 1.5; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 100px; background: var(--navy); color: #fff; margin-bottom: 0.3rem; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.65); text-align: center; padding: 2rem; font-size: 0.82rem; line-height: 1.8; }
+    footer strong { color: rgba(255,255,255,0.9); }
+    @media (max-width: 680px) { .nav-inner { flex-wrap: wrap; } main { padding: 2rem 1.2rem 3rem; } }
+</style>
 </head>
 <body>
-    <header>
-        <div class="header-decoration">
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-        </div>
-        <div class="header-content">
-            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <img src="university-logo.png" alt="University of Haifa Logo" style="height: 60px; width: auto; background-color: white; padding: 5px; border-radius: 4px;">
-                <div>
-                    <h1>Prof. Shlomo Hareli</h1>
-                    <p>Social Psychologist | University of Haifa</p>
-                    <p class="header-tagline">Emotion Perception × AI Research × Evidence-Based Teaching</p>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="datasets.html">Datasets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-                
-                <li class="dropdown"><a href="#" role="button" aria-label="More pages menu" aria-expanded="false" aria-haspopup="true" onclick="event.preventDefault(); var menu = this.nextElementSibling; var isOpen = menu.style.display === 'block'; menu.style.display = isOpen ? 'none' : 'block'; this.setAttribute('aria-expanded', !isOpen); return false;">More ▼</a><div class="dropdown-content" role="menu" style="display: none;"><a href="news.html" role="menuitem">In the News and on the Web</a><a href="posters.html" role="menuitem">Posters at Conferences</a><a href="presentations.html" role="menuitem">Invited Presentations</a><a href="facebook.html" role="menuitem">My Facebook Group</a><a href="accessibility.html" role="menuitem">Accessibility Statement</a></div></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main>
-            <h1>Teaching</h1>
-
-            <section>
-                <h2>Current Courses</h2>
-                <h3>School of Business Administration - M.B.A.</h3>
-                <ul>
-                    <li><strong>Selected Issues in Behavioral Sciences</strong> - Teaching this course to exclusive programs in the department</li>
-                    <li><strong>Social Psychology of Organizations</strong> - Core MBA curriculum course</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Previous Teaching Experience</h2>
-                <p>In addition to my current teaching, I have also taught the following courses:</p>
-                <ul>
-                    <li><strong>Introductory Social Psychology</strong> – The Department of Psychology and the Department of Multidisciplinary Studies</li>
-                    <li><strong>Attitudes and Persuasion</strong> – Department of Psychology, The Open University</li>
-                    <li><strong>The Psychology of Emotions</strong> – Department of Psychology and the Department of Human Services</li>
-                    <li><strong>Introduction to Personality Psychology</strong> – General Psychology course</li>
-                    <li><strong>Research Methods</strong> – Foundation course for graduate students</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Teaching Philosophy and Methodology</h2>
-                <div class="about-box">
-                    <p>My approach to teaching is grounded in a simple belief: <strong>students should leave the classroom not only with new knowledge, but with the sense that they have experienced something meaningful</strong>. I aim for learning that resonates, something that leaves a mark long after the formal requirements of the course are completed.</p>
-
-                    <p>To achieve this, I design my courses so that students do not merely <strong>learn about</strong> psychological concepts, they <strong>experience</strong> them. Each class integrates hands-on activities, demonstrations, and real-time applications that connect theory to lived experience. I place strong emphasis on active engagement, critical thinking, and personal reflection.</p>
-
-                    <p>A central component of my teaching is the use of <strong>technology-enhanced learning tools</strong>, including <strong>AI guided simulations</strong>, interactive tasks, and web-based platforms. Students participate in online questionnaires, behavioral tasks, and data-driven exercises using their smartphones or tablets. The results are processed automatically and incorporated directly into the lecture, allowing us to analyze class-generated data on the spot.</p>
-
-                    <p>To support this approach, I rely on Google's suite of online applications such as Forms, Sheets, and Slides, combined with specialized add-ins that enable automated data manipulation, instant feedback emails, and dynamic integration of results into class presentations. This method brings the long tradition of experiential teaching in psychology into the modern era of digital and AI-supported learning.</p>
-
-                    <p>My goal is to create a learning environment that is <strong>interactive, evidence based, technologically current, and personally meaningful</strong>—an environment where students feel that what they learn matters both academically and beyond.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Key Teaching Features</h2>
-                <div class="research-item">
-                    <strong>Experiential Learning</strong>
-                    <p>Students experience psychological concepts firsthand through classroom activities and demonstrations rather than just learning about them theoretically.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>Technology Integration</strong>
-                    <p>Using AI-guided simulations, interactive web-based platforms, and mobile-enabled tasks that generate real-time data for classroom analysis.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>Data-Driven Instruction</strong>
-                    <p>Incorporating class-generated data through Google Forms, Sheets, and Slides with automated processing for immediate feedback and dynamic presentation integration.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>Active Engagement</strong>
-                    <p>Emphasizing critical thinking, personal reflection, and active participation throughout all courses.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>Meaningful Learning</strong>
-                    <p>Creating learning experiences that students remember and apply beyond the classroom, connecting academic content to real-world significance.</p>
-                </div>
-            </section>
-
-            <section class="ai-pedagogy-section">
-                <h2>AI-Enhanced Pedagogy</h2>
-
-                <div class="about-box">
-                    <p>I am at the forefront of integrating artificial intelligence into psychology education, transforming how students engage with complex concepts in emotion perception and social psychology. My approach goes beyond simply using technology—I strategically leverage AI to create active, evidence-based learning experiences that mirror contemporary research practices.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong><span style="font-size: 1.1em;">🎯</span> AI-Guided Teaching Exercises</strong>
-                    <p>Students work through structured exercises powered by AI tools, enabling them to explore psychological phenomena interactively. These exercises adapt to student responses and provide immediate, contextual feedback that deepens understanding of emotion perception principles.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong><span style="font-size: 1.1em;">🔬</span> Live Experimental Simulations</strong>
-                    <p>Using AI-powered platforms, I conduct real-time emotion perception experiments during class sessions. Students participate as both researchers and subjects, experiencing firsthand how variables affect emotional judgments. AI enables instant data aggregation and visualization, turning the classroom into an active research laboratory.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong><span style="font-size: 1.1em;">📊</span> In Vivo Data Analysis</strong>
-                    <p>Class-generated data is analyzed in real-time using AI-assisted tools, allowing students to observe how raw responses transform into meaningful psychological insights. This immediate feedback loop demystifies research methodology and reinforces statistical concepts through direct application.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong><span style="font-size: 1.1em;">🔄</span> Classroom Study Replications</strong>
-                    <p>Students conduct systematic replications of influential emotion perception studies, with AI streamlining data collection and analysis. This approach teaches both classic findings and modern research practices, while giving students ownership of the scientific process.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong><span style="font-size: 1.1em;">📚</span> AI-Created Teaching Materials</strong>
-                    <p>I use AI tools (primarily Claude) to develop high-quality, culturally appropriate educational content, including professional Hebrew-language documents, customized visualizations, interactive exercises, and adaptive assignments. This allows for rapid iteration and personalization of materials based on student needs and emerging research.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong><span style="font-size: 1.1em;">💡</span> Critical AI Literacy</strong>
-                    <p>Beyond using AI as a tool, I teach students to critically evaluate AI outputs, understand its limitations, and recognize when human judgment is essential. This prepares them not just to use AI, but to be thoughtful practitioners in an AI-integrated professional landscape.</p>
-                </div>
-
-                <div class="about-box" style="margin-top: 20px; background-color: #e3f2fd; border-left: 4px solid #2196F3;">
-                    <h3 style="color: #1976D2;">Impact on Student Learning</h3>
-                    <p>This AI-enhanced approach achieves several pedagogical goals:</p>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                        <li><strong>Bridging Theory and Practice:</strong> Students see abstract concepts come alive through real-time experimentation and analysis</li>
-                        <li><strong>Developing Research Competencies:</strong> Students gain hands-on experience with contemporary research tools and methodologies</li>
-                        <li><strong>Personalizing Learning:</strong> AI enables customization of content and pacing to match diverse learning needs</li>
-                        <li><strong>Preparing for the Future:</strong> Students develop the AI literacy and critical thinking skills essential for modern psychology practice and research</li>
-                        <li><strong>Increasing Engagement:</strong> Interactive, technology-enhanced activities maintain high student motivation and active participation</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="university-logo.png" alt="University of Haifa" class="logo">
+    <div class="header-text">
+      <h1>Prof. Shlomo Hareli</h1>
+      <p class="tagline">Social Psychologist &nbsp;·&nbsp; University of Haifa</p>
     </div>
+  </div>
+  <nav><div class="nav-inner"><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="students.html">Students</a>
+<a href="teaching.html" class="active">Teaching</a>
+<a href="datasets.html">Datasets</a>
+<a href="contact.html">Contact</a>
+<div class="dropdown"><button class="dropdown-btn">More ▾</button><div class="dropdown-menu"><a href="news.html">In the News and on the Web</a>
+<a href="posters.html">Posters at Conferences</a>
+<a href="presentations.html">Invited Presentations</a>
+<a href="facebook.html">My Facebook Group</a>
+<a href="accessibility.html">Accessibility Statement</a>
+</div></div></div></nav>
+</header>
+<main>
+<h1 class="page-title">Teaching</h1>
+<div class="title-rule"></div>
 
-    <footer>
-        <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
-        <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>School of Business Administration, Faculty of Management</p>
-    </footer>
+<h2 class="section-h">Current Courses</h2>
+<div class="card">
+  <h3 class="sub-h">School of Business Administration – M.B.A.</h3>
+  <ul>
+    <li><strong>Selected Issues in Behavioral Sciences</strong> — Taught to exclusive programs in the department</li>
+    <li><strong>Social Psychology of Organizations</strong> — Core MBA curriculum course</li>
+  </ul>
+</div>
+
+<h2 class="section-h">Previous Courses</h2>
+<ul>
+  <li><strong>Introductory Social Psychology</strong> – Department of Psychology and Department of Multidisciplinary Studies</li>
+  <li><strong>Attitudes and Persuasion</strong> – Department of Psychology, The Open University</li>
+  <li><strong>The Psychology of Emotions</strong> – Department of Psychology and Department of Human Services</li>
+  <li><strong>Introduction to Personality Psychology</strong> – General Psychology course</li>
+  <li><strong>Research Methods</strong> – Foundation course for graduate students</li>
+</ul>
+
+<h2 class="section-h">Teaching Philosophy</h2>
+<div class="info-box">
+  <p>My approach is grounded in a simple belief: students should leave the classroom not only with new knowledge, but with the sense that they have experienced something meaningful. I aim for learning that resonates long after the formal requirements of the course are completed.</p>
+  <p>To achieve this, I design courses so that students do not merely <em>learn about</em> psychological concepts — they <em>experience</em> them. Each class integrates hands-on activities, demonstrations, and real-time applications that connect theory to lived experience.</p>
+  <p>A central component is the use of <strong>technology-enhanced tools</strong>: AI-guided simulations, interactive tasks, and web-based platforms where students participate in online questionnaires and behavioral tasks. Results are processed automatically and incorporated directly into the lecture, turning the classroom into an active research environment.</p>
+</div>
+
+<h2 class="section-h">AI-Enhanced Pedagogy</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:0.5rem;">
+  <div class="card">
+    <h3 class="sub-h">Live Experimental Simulations</h3>
+    <p>Real-time emotion perception experiments during class sessions. Students participate as both researchers and subjects, with AI enabling instant data aggregation and visualization.</p>
+  </div>
+  <div class="card">
+    <h3 class="sub-h">In Vivo Data Analysis</h3>
+    <p>Class-generated data analyzed in real time, letting students observe how raw responses transform into meaningful psychological insights.</p>
+  </div>
+  <div class="card">
+    <h3 class="sub-h">Study Replications</h3>
+    <p>Students conduct systematic replications of influential emotion perception studies with AI streamlining data collection, teaching both classic findings and modern practices.</p>
+  </div>
+  <div class="card">
+    <h3 class="sub-h">Critical AI Literacy</h3>
+    <p>Training students to evaluate AI outputs critically, understand its limitations, and recognize when human judgment is essential — preparing them as thoughtful practitioners.</p>
+  </div>
+</div>
+</main>
+<footer>
+  <p><strong>© 2026 Prof. Shlomo Hareli</strong> &nbsp;·&nbsp; University of Haifa</p>
+  <p>Laboratory for the Study of Social Perception of Emotions</p>
+  <p>School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences</p>
+</footer>
 </body>
 </html>

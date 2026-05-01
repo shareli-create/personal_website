@@ -1,139 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Shlomo Hareli - Datasets</title>
-    <link rel="stylesheet" href="style2.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datasets – Prof. Shlomo Hareli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:    #1b3256;
+      --navy-lt: #2a4a7a;
+      --gold:    #b8892a;
+      --gold-lt: #d4a63a;
+      --ink:     #1e1e1e;
+      --muted:   #5a5a5a;
+      --border:  #d9d2c5;
+      --bg:      #f7f4ef;
+      --card-bg: #ffffff;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Source Sans 3', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 16px; }
+    .site-header { background: var(--navy); color: white; padding: 1.2rem 0 0; }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 1.4rem; }
+    .header-inner img.logo { height: 54px; width: auto; filter: brightness(0) invert(1); opacity: 0.85; }
+    .header-text h1 { font-family: var(--serif); font-size: 1.65rem; font-weight: 500; letter-spacing: 0.01em; line-height: 1.2; color: #fff; }
+    .header-text .tagline { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-top: 0.2rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    nav { background: var(--navy-lt); margin-top: 1rem; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: stretch; }
+    nav a, .dropdown-btn { display: flex; align-items: center; padding: 0.7rem 1.1rem; font-family: var(--sans); font-size: 0.84rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.8); transition: background 0.15s, color 0.15s; border: none; background: none; cursor: pointer; white-space: nowrap; }
+    nav a:hover, .dropdown-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    nav a.active { background: rgba(255,255,255,0.1); border-bottom: 2px solid var(--gold-lt); color: #fff; }
+    .dropdown { position: relative; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--navy); min-width: 220px; z-index: 100; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-transform: none; letter-spacing: 0; border-top: 1px solid rgba(255,255,255,0.07); }
+    .dropdown-menu a.active { background: rgba(255,255,255,0.1); color: #fff; }
+    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    h1.page-title { font-family: var(--serif); font-size: 2.2rem; font-weight: 500; color: var(--navy); margin-bottom: 0.3rem; }
+    .title-rule { width: 40px; height: 2px; background: var(--gold); margin-bottom: 2rem; }
+    h2.section-h { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; color: var(--navy); margin: 2rem 0 0.8rem; }
+    h3.sub-h { font-family: var(--sans); font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); margin: 1.4rem 0 0.5rem; }
+    p { font-size: 0.98rem; color: #333; line-height: 1.75; margin-bottom: 0.9em; }
+    ul, ol { margin: 0.5em 0 1em 1.5em; }
+    li { font-size: 0.97rem; color: #333; line-height: 1.7; margin-bottom: 0.2em; }
+    a { color: var(--navy-lt); }
+    a:hover { color: var(--gold); }
+    strong { color: var(--ink); }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-top: 3px solid var(--navy); padding: 1.4rem 1.6rem; border-radius: 2px; margin-bottom: 1.2rem; }
+    .card:hover { border-top-color: var(--gold); box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+    .info-box { background: var(--card-bg); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.2rem 1.6rem; border-radius: 0 2px 2px 0; margin-bottom: 1.2rem; }
+    .btn { display: inline-block; padding: 0.5rem 1.2rem; background: var(--navy); color: #fff; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.15s; }
+    .btn:hover { background: var(--navy-lt); color: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+    thead th { background: var(--navy); color: #fff; padding: 0.7rem 1rem; text-align: left; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:hover { background: rgba(27,50,86,0.03); }
+    tbody td { padding: 0.7rem 1rem; vertical-align: top; line-height: 1.5; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 100px; background: var(--navy); color: #fff; margin-bottom: 0.3rem; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.65); text-align: center; padding: 2rem; font-size: 0.82rem; line-height: 1.8; }
+    footer strong { color: rgba(255,255,255,0.9); }
+    @media (max-width: 680px) { .nav-inner { flex-wrap: wrap; } main { padding: 2rem 1.2rem 3rem; } }
+</style>
 </head>
 <body>
-    <header>
-        <div class="header-decoration">
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-        </div>
-        <div class="header-content">
-            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <img src="university-logo.png" alt="University of Haifa Logo" style="height: 60px; width: auto; background-color: white; padding: 5px; border-radius: 4px;">
-                <div>
-            <h1>Prof. Shlomo Hareli</h1>
-            <p>Social Psychologist | University of Haifa</p>
-                    <p class="header-tagline">Emotion Perception × AI Research × Evidence-Based Teaching</p>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="datasets.html">Datasets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-                
-                <li class="dropdown"><a href="#" role="button" aria-label="More pages menu" aria-expanded="false" aria-haspopup="true" onclick="event.preventDefault(); var menu = this.nextElementSibling; var isOpen = menu.style.display === 'block'; menu.style.display = isOpen ? 'none' : 'block'; this.setAttribute('aria-expanded', !isOpen); return false;">More ▼</a><div class="dropdown-content" role="menu" style="display: none;"><a href="news.html" role="menuitem">In the News and on the Web</a><a href="posters.html" role="menuitem">Posters at Conferences</a><a href="presentations.html" role="menuitem">Invited Presentations</a><a href="facebook.html" role="menuitem">My Facebook Group</a><a href="accessibility.html" role="menuitem">Accessibility Statement</a></div></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main>
-            <h1>Research Datasets</h1>
-
-            <section>
-                <h2>Haifa Set of Facial Expressions of Emotions (HSFEE)</h2>
-
-                <div class="dataset-card">
-                    <h3>Overview</h3>
-                    <p>HSFEE (Haifa Set of Facial Expressions of Emotions) consists of emotional facial expressions by 3 Israeli men and 3 Israeli women. Each expression was created by instructing actors to show the respective expression. The set was created by Dr. Shimon Elkabetz in collaboration with Prof. Shlomo Hareli and Prof. Ursula Hess.</p>
-
-                    <p>Expressions were validated in a study using them (Hareli, Elkabetz, & Hess, 2019). The set contains expressions of happiness, awe, surprise and neutrality for each actor. Photos were taken against a green screen background to enable electronic manipulation of background context.</p>
-                </div>
-
-                <h3>Terms of Use</h3>
-                <div class="dataset-card">
-                    <p>The Haifa Set of Facial Expressions of Emotions and stimuli are to be used <strong>without charge for non-commercial research purposes only</strong>. All and any (re-)distribution and publishing without the written consent of the copyright holders is forbidden.</p>
-
-                    <p><strong>Copyright holder:</strong> Laboratory for the Study of Social Perception of Emotions, the University of Haifa, Haifa Israel.</p>
-
-                    <p>In order to use the stimuli for purposes of illustration in conferences or manuscripts, consent from the authors of the HSFEE must be obtained. Please contact Prof. Hareli Shlomo at: <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="74071c150611181d34011a1d025a1c151d12155a15175a1d18">[email&#160;protected]</a></strong></p>
-
-                    <p><strong>Required Attribution:</strong> The creators of the set, Dr. Shimon Elkabetz, Prof. Ursula Hess and Prof. Shlomo Hareli, should be acknowledged in any manuscript originating from projects using the stimulus set via the following reference:</p>
-
-                    <p style="margin-left: 2rem; font-style: italic;">Hareli, S., Elkabetz, S., & Hess, U. (2019). Drawing inferences from emotion expressions: The role of situative informativeness and context. <em>Emotion</em>, 19, 200-208. doi: 10.1037/emo0000368</p>
-
-                    <p>One electronic copy of any manuscript resulting from use of the HSFEE stimulus set should be sent to Prof. Hareli Shlomo at: <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f88b90998a9d9491b88d96918ed69099919e99d6999bd69194">[email&#160;protected]</a></strong></p>
-                </div>
-
-                <h3>Data Security</h3>
-                <div class="dataset-card">
-                    <p>In order to download the HSFEE, you will be asked for your name, institutional affiliation, and your email address. This data will be saved and is necessary in order to contact you and to send you a download link to the HSFEE. The data will not be used for any other purpose.</p>
-
-                    <p>If you do not complete the download form, no data will be saved.</p>
-
-                    <p>By marking the "Terms of use" below, you signal your agreement with this use of your data.</p>
-
-                    <p><a href="https://sites.google.com/view/prof-shlomo-hareli/haifa-set-of-facial-expressions-of-emotions" target="_blank" class="btn">Request HSFEE Dataset Access</a></p>
-                    <p style="font-size: 0.9rem; color: #555;"><em>Note: You will be redirected to a form where you can request access to the dataset.</em></p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Body Weight and Expressions of Emotions - AI-Generated Images Datasets</h2>
-
-                <div class="dataset-card">
-                    <h3>Version 1</h3>
-                    <p>This dataset includes <strong>72 high-quality images</strong> of individuals from the chest up, generated using ComfyUI and enhanced with the fluxi-dev model. The images represent diverse body types (fit, middleweight, obese) and emotional expressions (happiness, sadness, neutrality) across genders.</p>
-
-                    <p>Each image was meticulously analyzed and edited to ensure an accurate representation of emotions, with a <strong>validation criterion of at least 95% likelihood of the desired emotion</strong>. The final dataset features images of four different men and women, each expressing the specified emotions.</p>
-
-                    <p>Additionally, it includes the results of an analysis using Py-Feat, detailing the likelihood of the emotion shown and the specific Action Units (AUs) detected.</p>
-
-                    <p><a href="https://drive.google.com/drive/folders/1Rg3NzdbkGGvcZoNGEhnz0SM0Jt9Xp-lA?usp=sharing" target="_blank" class="btn">Access Version 1 Dataset</a></p>
-                </div>
-
-                <div class="dataset-card">
-                    <h3>Version 2</h3>
-                    <p>This dataset includes <strong>96 high-quality images</strong> of individuals from the chest up, generated using ComfyUI and enhanced with the fluxi-dev model. The images represent diverse body types (fit, middleweight, obese) and emotional expressions (happiness, sadness, anger, and neutrality) across genders.</p>
-
-                    <p>Each image was meticulously analyzed and edited to ensure an accurate representation of emotions, with a <strong>validation criterion of at least 95% likelihood of the desired emotion</strong>. The final dataset features images of four different men and women, each expressing all four emotions.</p>
-
-                    <p>Additionally, it includes the results of an analysis using Py-Feat, detailing the likelihood of the emotion shown and the specific Action Units (AUs) detected.</p>
-
-                    <p><a href="https://drive.google.com/drive/folders/1t6pT5mlwFEa_WYz8ayxDuCNqSZWIlrd3?usp=sharing" target="_blank" class="btn">Access Version 2 Dataset</a></p>
-                </div>
-
-                <h3>Dataset Features</h3>
-                <ul>
-                    <li><strong>High Resolution Images:</strong> Professional quality images suitable for research and publication</li>
-                    <li><strong>Diverse Body Types:</strong> Representation of fit, middleweight, and obese body compositions</li>
-                    <li><strong>Multiple Emotional Expressions:</strong> Comprehensive coverage of key emotional states</li>
-                    <li><strong>Gender Diversity:</strong> Both male and female participants represented equally</li>
-                    <li><strong>Validated Emotions:</strong> All images meet 95% validation threshold for emotion accuracy</li>
-                    <li><strong>Action Unit Analysis:</strong> Detailed Py-Feat analysis of facial action units for scientific validation</li>
-                    <li><strong>AI-Generated:</strong> Created using advanced AI models (ComfyUI with fluxi-dev) for consistency and quality</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Using These Datasets</h2>
-                <div class="highlight">
-                    <p>These datasets are valuable research resources for studying the relationship between emotional expressions, body characteristics, and social perception. They can be used for:</p>
-                    <ul>
-                        <li>Understanding how body weight influences perception of emotions</li>
-                        <li>Investigating the relationship between body type and attribution of personality traits</li>
-                        <li>Developing and testing emotion recognition algorithms</li>
-                        <li>Cross-cultural emotion perception studies</li>
-                        <li>Training machine learning models for emotion detection</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="university-logo.png" alt="University of Haifa" class="logo">
+    <div class="header-text">
+      <h1>Prof. Shlomo Hareli</h1>
+      <p class="tagline">Social Psychologist &nbsp;·&nbsp; University of Haifa</p>
     </div>
+  </div>
+  <nav><div class="nav-inner"><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="students.html">Students</a>
+<a href="teaching.html">Teaching</a>
+<a href="datasets.html" class="active">Datasets</a>
+<a href="contact.html">Contact</a>
+<div class="dropdown"><button class="dropdown-btn">More ▾</button><div class="dropdown-menu"><a href="news.html">In the News and on the Web</a>
+<a href="posters.html">Posters at Conferences</a>
+<a href="presentations.html">Invited Presentations</a>
+<a href="facebook.html">My Facebook Group</a>
+<a href="accessibility.html">Accessibility Statement</a>
+</div></div></div></nav>
+</header>
+<main>
+<h1 class="page-title">Research Datasets</h1>
+<div class="title-rule"></div>
 
-    <fo
+<h2 class="section-h">Haifa Set of Facial Expressions of Emotions (HSFEE)</h2>
+
+<div class="card">
+  <h3 class="sub-h">Overview</h3>
+  <p>HSFEE consists of emotional facial expressions by 3 Israeli men and 3 Israeli women, created by instructing actors to show the respective expression. The set was created by Dr. Shimon Elkabetz in collaboration with Prof. Shlomo Hareli and Prof. Ursula Hess.</p>
+  <p>Expressions were validated in Hareli, Elkabetz &amp; Hess (2019). The set contains expressions of happiness, awe, surprise, and neutrality for each actor. Photos were taken against a green screen background to enable electronic manipulation of background context.</p>
+</div>
+
+<div class="card">
+  <h3 class="sub-h">Terms of Use</h3>
+  <p>The HSFEE stimuli are available <strong>without charge for non-commercial research purposes only</strong>. All redistribution and publishing without written consent of the copyright holders is forbidden.</p>
+  <p><strong>Copyright holder:</strong> Laboratory for the Study of Social Perception of Emotions, University of Haifa, Israel.</p>
+  <p>For use in conference presentations or manuscripts, consent must be obtained from the authors. Please contact Prof. Hareli at <a href="mailto:shareli@univ.haifa.ac.il">shareli@univ.haifa.ac.il</a>.</p>
+  <p><strong>Required attribution:</strong></p>
+  <p style="margin-left:1.2rem;font-style:italic;">Hareli, S., Elkabetz, S., &amp; Hess, U. (2019). Drawing inferences from emotion expressions: The role of situative informativeness and context. <em>Emotion</em>, 19, 200–208. doi: 10.1037/emo0000368</p>
+  <p>One electronic copy of any manuscript resulting from use of the HSFEE should be sent to <a href="mailto:shareli@univ.haifa.ac.il">shareli@univ.haifa.ac.il</a>.</p>
+  <div style="margin-top:1rem;">
+    <a href="https://sites.google.com/view/prof-shlomo-hareli/haifa-set-of-facial-expressions-of-emotions" target="_blank" rel="noopener" class="btn">Request HSFEE Access</a>
+  </div>
+</div>
+
+<h2 class="section-h">Body Weight &amp; Emotion Expressions — AI-Generated Image Datasets</h2>
+<p>Both datasets include high-quality images of individuals from the chest up, generated using ComfyUI with the Flux.1-dev model. All images were validated with a minimum 95% likelihood threshold using Py-Feat facial action unit analysis.</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:0.5rem;">
+  <div class="card">
+    <h3 class="sub-h">Version 1 — 72 Images</h3>
+    <p>Body types: fit, middleweight, obese. Emotions: happiness, sadness, neutrality. Includes 4 male and 4 female identities, each expressing all emotions. Includes full Py-Feat AU analysis.</p>
+    <div style="margin-top:1rem;">
+      <a href="https://drive.google.com/drive/folders/1Rg3NzdbkGGvcZoNGEhnz0SM0Jt9Xp-lA?usp=sharing" target="_blank" rel="noopener" class="btn">Access Version 1</a>
+    </div>
+  </div>
+  <div class="card">
+    <h3 class="sub-h">Version 2 — 96 Images</h3>
+    <p>Body types: fit, middleweight, obese. Emotions: happiness, sadness, anger, neutrality. Includes 4 male and 4 female identities, each expressing all four emotions. Includes full Py-Feat AU analysis.</p>
+    <div style="margin-top:1rem;">
+      <a href="https://drive.google.com/drive/folders/1t6pT5mlwFEa_WYz8ayxDuCNqSZWIlrd3?usp=sharing" target="_blank" rel="noopener" class="btn">Access Version 2</a>
+    </div>
+  </div>
+</div>
+
+<h2 class="section-h">Research Applications</h2>
+<ul>
+  <li>How body weight influences perception of emotions and personality trait attribution</li>
+  <li>Cross-cultural emotion perception studies</li>
+  <li>Benchmarking automated emotion recognition algorithms</li>
+  <li>Training machine learning models for emotion detection in naturalistic stimuli</li>
+</ul>
+</main>
+<footer>
+  <p><strong>© 2026 Prof. Shlomo Hareli</strong> &nbsp;·&nbsp; University of Haifa</p>
+  <p>Laboratory for the Study of Social Perception of Emotions</p>
+  <p>School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences</p>
+</footer>
+</body>
+</html>

@@ -1,132 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Shlomo Hareli - Accessibility Statement</title>
-    <link rel="stylesheet" href="style2.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Statement – Prof. Shlomo Hareli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:    #1b3256;
+      --navy-lt: #2a4a7a;
+      --gold:    #b8892a;
+      --gold-lt: #d4a63a;
+      --ink:     #1e1e1e;
+      --muted:   #5a5a5a;
+      --border:  #d9d2c5;
+      --bg:      #f7f4ef;
+      --card-bg: #ffffff;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Source Sans 3', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 16px; }
+    .site-header { background: var(--navy); color: white; padding: 1.2rem 0 0; }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 1.4rem; }
+    .header-inner img.logo { height: 54px; width: auto; filter: brightness(0) invert(1); opacity: 0.85; }
+    .header-text h1 { font-family: var(--serif); font-size: 1.65rem; font-weight: 500; letter-spacing: 0.01em; line-height: 1.2; color: #fff; }
+    .header-text .tagline { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-top: 0.2rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    nav { background: var(--navy-lt); margin-top: 1rem; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: stretch; }
+    nav a, .dropdown-btn { display: flex; align-items: center; padding: 0.7rem 1.1rem; font-family: var(--sans); font-size: 0.84rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.8); transition: background 0.15s, color 0.15s; border: none; background: none; cursor: pointer; white-space: nowrap; }
+    nav a:hover, .dropdown-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    nav a.active { background: rgba(255,255,255,0.1); border-bottom: 2px solid var(--gold-lt); color: #fff; }
+    .dropdown { position: relative; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--navy); min-width: 220px; z-index: 100; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-transform: none; letter-spacing: 0; border-top: 1px solid rgba(255,255,255,0.07); }
+    .dropdown-menu a.active { background: rgba(255,255,255,0.1); color: #fff; }
+    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    h1.page-title { font-family: var(--serif); font-size: 2.2rem; font-weight: 500; color: var(--navy); margin-bottom: 0.3rem; }
+    .title-rule { width: 40px; height: 2px; background: var(--gold); margin-bottom: 2rem; }
+    h2.section-h { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; color: var(--navy); margin: 2rem 0 0.8rem; }
+    h3.sub-h { font-family: var(--sans); font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); margin: 1.4rem 0 0.5rem; }
+    p { font-size: 0.98rem; color: #333; line-height: 1.75; margin-bottom: 0.9em; }
+    ul, ol { margin: 0.5em 0 1em 1.5em; }
+    li { font-size: 0.97rem; color: #333; line-height: 1.7; margin-bottom: 0.2em; }
+    a { color: var(--navy-lt); }
+    a:hover { color: var(--gold); }
+    strong { color: var(--ink); }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-top: 3px solid var(--navy); padding: 1.4rem 1.6rem; border-radius: 2px; margin-bottom: 1.2rem; }
+    .card:hover { border-top-color: var(--gold); box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+    .info-box { background: var(--card-bg); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.2rem 1.6rem; border-radius: 0 2px 2px 0; margin-bottom: 1.2rem; }
+    .btn { display: inline-block; padding: 0.5rem 1.2rem; background: var(--navy); color: #fff; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.15s; }
+    .btn:hover { background: var(--navy-lt); color: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+    thead th { background: var(--navy); color: #fff; padding: 0.7rem 1rem; text-align: left; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:hover { background: rgba(27,50,86,0.03); }
+    tbody td { padding: 0.7rem 1rem; vertical-align: top; line-height: 1.5; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 100px; background: var(--navy); color: #fff; margin-bottom: 0.3rem; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.65); text-align: center; padding: 2rem; font-size: 0.82rem; line-height: 1.8; }
+    footer strong { color: rgba(255,255,255,0.9); }
+    @media (max-width: 680px) { .nav-inner { flex-wrap: wrap; } main { padding: 2rem 1.2rem 3rem; } }
+</style>
 </head>
 <body>
-    <header>
-        <div class="header-decoration">
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-        </div>
-        <div class="header-content">
-            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <img src="university-logo.png" alt="University of Haifa Logo" style="height: 60px; width: auto; background-color: white; padding: 5px; border-radius: 4px;">
-                <div>
-            <h1>Prof. Shlomo Hareli</h1>
-            <p>Social Psychologist | University of Haifa</p>
-                    <p class="header-tagline">Emotion Perception × AI Research × Evidence-Based Teaching</p>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="datasets.html">Datasets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-                
-                <li class="dropdown"><a href="#" role="button" aria-label="More pages menu" aria-expanded="false" aria-haspopup="true" onclick="event.preventDefault(); var menu = this.nextElementSibling; var isOpen = menu.style.display === 'block'; menu.style.display = isOpen ? 'none' : 'block'; this.setAttribute('aria-expanded', !isOpen); return false;">More ▼</a><div class="dropdown-content" role="menu" style="display: none;"><a href="news.html" role="menuitem">In the News and on the Web</a><a href="posters.html" role="menuitem">Posters at Conferences</a><a href="presentations.html" role="menuitem">Invited Presentations</a><a href="facebook.html" role="menuitem">My Facebook Group</a><a href="accessibility.html" role="menuitem">Accessibility Statement</a></div></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main>
-            <section>
-                <h1>Accessibility Statement</h1>
-                <p>Prof. Shlomo Hareli's website is committed to providing equal access and opportunity to all visitors, regardless of their abilities or the technology they use to access the site.</p>
-            </section>
-
-            <section>
-                <h2>Our Commitment to Accessibility</h2>
-                <p>We strive to ensure that all content on this website is accessible and usable by everyone, including people with disabilities. This website has been designed and developed with accessibility principles in mind to comply with relevant web accessibility standards.</p>
-            </section>
-
-            <section>
-                <div class="accessibility-section">
-                    <h3>Standards Compliance</h3>
-                    <p>This website aims to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards, developed by the World Wide Web Consortium (W3C). These guidelines provide recommendations for making web content more accessible to people with disabilities, including those with visual, auditory, mobility, and cognitive disabilities.</p>
-                </div>
-
-                <div class="accessibility-section">
-                    <h3>Accessible Design Features</h3>
-                    <ul>
-                        <li><strong>Semantic HTML:</strong> The website uses proper HTML structure to ensure content is meaningful and properly interpreted by assistive technologies.</li>
-                        <li><strong>Color Contrast:</strong> Text colors have been chosen to provide sufficient contrast against background colors for better readability.</li>
-                        <li><strong>Keyboard Navigation:</strong> All interactive elements can be accessed using keyboard navigation alone, without requiring a mouse.</li>
-                        <li><strong>Alternative Text:</strong> Images include descriptive alternative text for screen reader users.</li>
-                        <li><strong>Responsive Design:</strong> The website is designed to be usable on devices of all sizes, from desktop computers to mobile phones.</li>
-                        <li><strong>Clear Navigation:</strong> The website has a clear, logical structure with consistent navigation throughout all pages.</li>
-                        <li><strong>Readable Fonts:</strong> The website uses legible fonts with appropriate sizes to enhance readability.</li>
-                    </ul>
-                </div>
-
-                <div class="accessibility-section">
-                    <h3>Assistive Technology Compatibility</h3>
-                    <p>This website is compatible with common assistive technologies, including:</p>
-                    <ul>
-                        <li>Screen readers (e.g., NVDA, JAWS)</li>
-                        <li>Voice recognition software</li>
-                        <li>Text enlargement tools</li>
-                        <li>High contrast display settings</li>
-                        <li>Keyboard-only navigation</li>
-                    </ul>
-                </div>
-
-                <div class="accessibility-section">
-                    <h3>Known Limitations</h3>
-                    <p>While we have made significant efforts to ensure accessibility, some limitations may exist. We are committed to addressing any accessibility issues as they are identified.</p>
-                </div>
-
-                <div class="accessibility-section">
-                    <h3>Contact for Accessibility Issues</h3>
-                    <p>If you experience any accessibility difficulties while using this website or would like to report an accessibility issue, please contact:</p>
-                    <p><strong>Prof. Shlomo Hareli</strong><br>
-                    Email: <a href="/cdn-cgi/l/email-protection#abd8c3cad9cec7c2ebdec5c2dd85c3cac2cdca85cac885c2c7"><span class="__cf_email__" data-cfemail="3142595043545d5871445f58471f59505857501f50521f585d">[email&#160;protected]</span></a><br>
-                    Phone: (972) 4-8288497</p>
-                    <p>We are committed to working with you to provide the information you need in an accessible format.</p>
-                </div>
-
-                <div class="accessibility-section">
-                    <h3>Third-Party Content</h3>
-                    <p>This website may contain links to external websites and resources. While we aim to link only to accessible content, we are not responsible for the accessibility of third-party websites. If you encounter accessibility issues with external sites, we encourage you to report them to the website operators.</p>
-                </div>
-
-                <div class="accessibility-section">
-                    <h3>Continuous Improvement</h3>
-                    <p>We are committed to maintaining and improving the accessibility of this website. We regularly review and update our accessibility practices based on user feedback, emerging best practices, and evolving web accessibility standards.</p>
-                    <p>If you have suggestions for improving the accessibility of this website, please contact us at the email or phone number provided above.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Additional Resources</h2>
-                <p>For more information about web accessibility, please visit:</p>
-                <ul>
-                    <li><a href="https://www.w3.org/WAI/" target="_blank">Web Accessibility Initiative (WAI)</a> - Resources and guidelines from the World Wide Web Consortium</li>
-                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG 2.1 Quick Reference</a> - Quick reference guide to Web Content Accessibility Guidelines</li>
-                    <li><a href="https://www.section508.gov/" target="_blank">Section 508</a> - U.S. federal accessibility requirements</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Last Updated</h2>
-                <p>This accessibility statement was last updated in February 2026. We are committed to keeping this statement current and reflecting any changes to our accessibility practices.</p>
-            </section>
-        </main>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="university-logo.png" alt="University of Haifa" class="logo">
+    <div class="header-text">
+      <h1>Prof. Shlomo Hareli</h1>
+      <p class="tagline">Social Psychologist &nbsp;·&nbsp; University of Haifa</p>
     </div>
+  </div>
+  <nav><div class="nav-inner"><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="students.html">Students</a>
+<a href="teaching.html">Teaching</a>
+<a href="datasets.html">Datasets</a>
+<a href="contact.html">Contact</a>
+<div class="dropdown"><button class="dropdown-btn">More ▾</button><div class="dropdown-menu"><a href="news.html">In the News and on the Web</a>
+<a href="posters.html">Posters at Conferences</a>
+<a href="presentations.html">Invited Presentations</a>
+<a href="facebook.html">My Facebook Group</a>
+<a href="accessibility.html" class="active">Accessibility Statement</a>
+</div></div></div></nav>
+</header>
+<main>
+<h1 class="page-title">Accessibility Statement</h1>
+<div class="title-rule"></div>
+<p>This website is committed to providing equal access to all visitors, regardless of ability or the technology used to access it.</p>
 
-    <footer>
-        <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
-        <p>Laboratory for the Stud
+<h2 class="section-h">Standards</h2>
+<p>This website aims to conform to <strong>WCAG 2.1 Level AA</strong> standards, developed by the World Wide Web Consortium (W3C).</p>
+
+<h2 class="section-h">Accessibility Features</h2>
+<ul>
+  <li><strong>Semantic HTML:</strong> Proper structure ensures content is correctly interpreted by assistive technologies.</li>
+  <li><strong>Color Contrast:</strong> Text colors provide sufficient contrast against backgrounds for readability.</li>
+  <li><strong>Keyboard Navigation:</strong> All interactive elements are accessible without a mouse.</li>
+  <li><strong>Alternative Text:</strong> Images include descriptive alternative text for screen reader users.</li>
+  <li><strong>Responsive Design:</strong> Usable on all device sizes.</li>
+  <li><strong>Clear Navigation:</strong> Consistent structure and navigation throughout all pages.</li>
+</ul>
+
+<h2 class="section-h">Contact for Accessibility Issues</h2>
+<p>If you encounter accessibility difficulties, please contact:<br>
+<strong>Prof. Shlomo Hareli</strong><br>
+Email: <a href="mailto:shareli@univ.haifa.ac.il">shareli@univ.haifa.ac.il</a><br>
+Phone: (972) 4-8288497</p>
+
+<h2 class="section-h">Third-Party Content</h2>
+<p>This website may link to external websites. We are not responsible for the accessibility of third-party sites.</p>
+
+<h2 class="section-h">Last Updated</h2>
+<p>This statement was last updated in May 2026.</p>
+</main>
+<footer>
+  <p><strong>© 2026 Prof. Shlomo Hareli</strong> &nbsp;·&nbsp; University of Haifa</p>
+  <p>Laboratory for the Study of Social Perception of Emotions</p>
+  <p>School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences</p>
+</footer>
+</body>
+</html>

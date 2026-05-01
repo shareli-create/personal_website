@@ -1,102 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Shlomo Hareli - Contact</title>
-    <link rel="stylesheet" href="style2.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Prof. Shlomo Hareli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:    #1b3256;
+      --navy-lt: #2a4a7a;
+      --gold:    #b8892a;
+      --gold-lt: #d4a63a;
+      --ink:     #1e1e1e;
+      --muted:   #5a5a5a;
+      --border:  #d9d2c5;
+      --bg:      #f7f4ef;
+      --card-bg: #ffffff;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Source Sans 3', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 16px; }
+    .site-header { background: var(--navy); color: white; padding: 1.2rem 0 0; }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 1.4rem; }
+    .header-inner img.logo { height: 54px; width: auto; filter: brightness(0) invert(1); opacity: 0.85; }
+    .header-text h1 { font-family: var(--serif); font-size: 1.65rem; font-weight: 500; letter-spacing: 0.01em; line-height: 1.2; color: #fff; }
+    .header-text .tagline { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-top: 0.2rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    nav { background: var(--navy-lt); margin-top: 1rem; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: stretch; }
+    nav a, .dropdown-btn { display: flex; align-items: center; padding: 0.7rem 1.1rem; font-family: var(--sans); font-size: 0.84rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.8); transition: background 0.15s, color 0.15s; border: none; background: none; cursor: pointer; white-space: nowrap; }
+    nav a:hover, .dropdown-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    nav a.active { background: rgba(255,255,255,0.1); border-bottom: 2px solid var(--gold-lt); color: #fff; }
+    .dropdown { position: relative; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--navy); min-width: 220px; z-index: 100; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-transform: none; letter-spacing: 0; border-top: 1px solid rgba(255,255,255,0.07); }
+    .dropdown-menu a.active { background: rgba(255,255,255,0.1); color: #fff; }
+    main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    h1.page-title { font-family: var(--serif); font-size: 2.2rem; font-weight: 500; color: var(--navy); margin-bottom: 0.3rem; }
+    .title-rule { width: 40px; height: 2px; background: var(--gold); margin-bottom: 2rem; }
+    h2.section-h { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; color: var(--navy); margin: 2rem 0 0.8rem; }
+    h3.sub-h { font-family: var(--sans); font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); margin: 1.4rem 0 0.5rem; }
+    p { font-size: 0.98rem; color: #333; line-height: 1.75; margin-bottom: 0.9em; }
+    ul, ol { margin: 0.5em 0 1em 1.5em; }
+    li { font-size: 0.97rem; color: #333; line-height: 1.7; margin-bottom: 0.2em; }
+    a { color: var(--navy-lt); }
+    a:hover { color: var(--gold); }
+    strong { color: var(--ink); }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-top: 3px solid var(--navy); padding: 1.4rem 1.6rem; border-radius: 2px; margin-bottom: 1.2rem; }
+    .card:hover { border-top-color: var(--gold); box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+    .info-box { background: var(--card-bg); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 1.2rem 1.6rem; border-radius: 0 2px 2px 0; margin-bottom: 1.2rem; }
+    .btn { display: inline-block; padding: 0.5rem 1.2rem; background: var(--navy); color: #fff; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.15s; }
+    .btn:hover { background: var(--navy-lt); color: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+    thead th { background: var(--navy); color: #fff; padding: 0.7rem 1rem; text-align: left; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:hover { background: rgba(27,50,86,0.03); }
+    tbody td { padding: 0.7rem 1rem; vertical-align: top; line-height: 1.5; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 100px; background: var(--navy); color: #fff; margin-bottom: 0.3rem; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.65); text-align: center; padding: 2rem; font-size: 0.82rem; line-height: 1.8; }
+    footer strong { color: rgba(255,255,255,0.9); }
+    @media (max-width: 680px) { .nav-inner { flex-wrap: wrap; } main { padding: 2rem 1.2rem 3rem; } }
+</style>
 </head>
 <body>
-    <header>
-        <div class="header-decoration">
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-        </div>
-        <div class="header-content">
-            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <img src="university-logo.png" alt="University of Haifa Logo" style="height: 60px; width: auto; background-color: white; padding: 5px; border-radius: 4px;">
-                <div>
-            <h1>Prof. Shlomo Hareli</h1>
-            <p>Social Psychologist | University of Haifa</p>
-                    <p class="header-tagline">Emotion Perception × AI Research × Evidence-Based Teaching</p>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="datasets.html">Datasets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-                
-                <li class="dropdown"><a href="#" role="button" aria-label="More pages menu" aria-expanded="false" aria-haspopup="true" onclick="event.preventDefault(); var menu = this.nextElementSibling; var isOpen = menu.style.display === 'block'; menu.style.display = isOpen ? 'none' : 'block'; this.setAttribute('aria-expanded', !isOpen); return false;">More ▼</a><div class="dropdown-content" role="menu" style="display: none;"><a href="news.html" role="menuitem">In the News and on the Web</a><a href="posters.html" role="menuitem">Posters at Conferences</a><a href="presentations.html" role="menuitem">Invited Presentations</a><a href="facebook.html" role="menuitem">My Facebook Group</a><a href="accessibility.html" role="menuitem">Accessibility Statement</a></div></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main>
-            <h1>Contact Information</h1>
-
-            <section>
-                <h2>Mailing Address</h2>
-                <div class="contact-info">
-                    <strong>Prof. Shlomo Hareli</strong>
-                    <p>School of Business Administration</p>
-                    <p>The Herta and Paul Amir Faculty of Social Sciences</p>
-                    <p>University of Haifa</p>
-                    <p>199 Aba Khoushy Ave., Mount Carmel</p>
-                    <p>Haifa, 3498838</p>
-                    <p>Israel</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Office Location</h2>
-                <div class="contact-info">
-                    <strong>Rabin's Building – Room 9136</strong>
-                </div>
-            </section>
-
-            <section>
-                <h2>Email</h2>
-                <div class="contact-info">
-                    <p><a href="mailto:shareli@univ.haifa.ac.il">shareli@univ.haifa.ac.il</a></p>
-                    <p><a href="mailto:shareli@bschool.haifa.ac.il">shareli@bschool.haifa.ac.il</a></p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Phone</h2>
-                <div class="contact-info">
-                    <p><strong>Telephone:</strong> (972) 4-8288497</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Fax</h2>
-                <div class="contact-info">
-                    <p><strong>Fax:</strong> (972) 4-8249194</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Laboratory</h2>
-                <div class="contact-info">
-                    <p><strong>Laboratory for the Study of Social Perception of Emotions</strong></p>
-                    <p>School of Business Administration</p>
-                    <p>The Herta and Paul Amir Faculty of Social Sciences</p>
-                    <p>University of Haifa</p>
-                </div>
-            </section>
-        </main>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="university-logo.png" alt="University of Haifa" class="logo">
+    <div class="header-text">
+      <h1>Prof. Shlomo Hareli</h1>
+      <p class="tagline">Social Psychologist &nbsp;·&nbsp; University of Haifa</p>
     </div>
-
-    <foo
+  </div>
+  <nav><div class="nav-inner"><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="students.html">Students</a>
+<a href="teaching.html">Teaching</a>
+<a href="datasets.html">Datasets</a>
+<a href="contact.html" class="active">Contact</a>
+<div class="dropdown"><button class="dropdown-btn">More ▾</button><div class="dropdown-menu"><a href="news.html">In the News and on the Web</a>
+<a href="posters.html">Posters at Conferences</a>
+<a href="presentations.html">Invited Presentations</a>
+<a href="facebook.html">My Facebook Group</a>
+<a href="accessibility.html">Accessibility Statement</a>
+</div></div></div></nav>
+</header>
+<main>
+<h1 class="page-title">Contact</h1>
+<div class="title-rule"></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;">
+  <div class="card">
+    <h3 class="sub-h">Mailing Address</h3>
+    <p style="margin:0;line-height:1.9;">
+      Prof. Shlomo Hareli<br>
+      School of Business Administration<br>
+      The Herta and Paul Amir Faculty of Social Sciences<br>
+      University of Haifa<br>
+      199 Aba Khoushy Ave., Mount Carmel<br>
+      Haifa, 3498838, Israel
+    </p>
+  </div>
+  <div class="card">
+    <h3 class="sub-h">Office &amp; Phone</h3>
+    <p style="margin:0;line-height:2;">
+      <strong>Office:</strong> Rabin's Building, Room 9136<br>
+      <strong>Tel:</strong> (972) 4-8288497<br>
+      <strong>Fax:</strong> (972) 4-8249194<br>
+      <strong>Email:</strong> <a href="mailto:shareli@univ.haifa.ac.il">shareli@univ.haifa.ac.il</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:shareli@bschool.haifa.ac.il">shareli@bschool.haifa.ac.il</a>
+    </p>
+  </div>
+</div>
+<div class="info-box">
+  <strong>Laboratory for the Study of Social Perception of Emotions</strong>
+  <p style="margin:0.4rem 0 0;">School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences, University of Haifa</p>
+</div>
+</main>
+<footer>
+  <p><strong>© 2026 Prof. Shlomo Hareli</strong> &nbsp;·&nbsp; University of Haifa</p>
+  <p>Laboratory for the Study of Social Perception of Emotions</p>
+  <p>School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences</p>
+</footer>
+</body>
+</html>
