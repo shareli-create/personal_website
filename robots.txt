@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shareli-create.github.io/personal_website/sitemap.xml
