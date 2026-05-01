@@ -1,209 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Shlomo Hareli - Social Psychologist | Emotion Perception & AI Research</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prof. Shlomo Hareli – Social Psychologist | University of Haifa</title>
+  <meta name="description" content="Professor Shlomo Hareli, University of Haifa. Research on emotion perception, social signals, and attribution theory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Prof. Shlomo Hareli is a social psychologist at University of Haifa studying emotion perception, social signals, and AI applications in emotion research. Head of Laboratory for the Study of Social Perception of Emotions.">
-    <meta name="keywords" content="Shlomo Hareli, social psychology, emotion perception, social signals, AI emotion research, University of Haifa, emotion communication, facial expressions, personality trait inferences">
-    <meta name="author" content="Prof. Shlomo Hareli">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://shareli-create.github.io/personal_website/index.html">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://shareli-create.github.io/personal_website/">
-    <meta property="og:title" content="Prof. Shlomo Hareli - Social Psychologist">
-    <meta property="og:description" content="Professor of Social Psychology at University of Haifa. Research focus: emotion perception, social signals, and AI applications in emotion research.">
-    <meta property="og:image" content="https://shareli-create.github.io/personal_website/profile-photo.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://shareli-create.github.io/personal_website/">
-    <meta property="twitter:title" content="Prof. Shlomo Hareli - Social Psychologist">
-    <meta property="twitter:description" content="Professor of Social Psychology at University of Haifa. Research focus: emotion perception, social signals, and AI applications in emotion research.">
-    <meta property="twitter:image" content="https://shareli-create.github.io/personal_website/profile-photo.jpg">
-
-    <link rel="stylesheet" href="style2.css">
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Shlomo Hareli",
-      "honorificPrefix": "Prof.",
-      "jobTitle": "Professor of Social Psychology",
-      "url": "https://shareli-create.github.io/personal_website/",
-      "image": "https://shareli-create.github.io/personal_website/profile-photo.jpg",
-      "sameAs": [
-        "https://en.wikipedia.org/wiki/Shlomo_Hareli",
-        "https://orcid.org/0000-0002-3101-868X",
-        "https://scholar.google.co.il/citations?user=uIs135cAAAAJ&hl=en"
-      ],
-      "worksFor": {
-        "@type": "EducationalOrganization",
-        "name": "University of Haifa",
-        "department": {
-          "@type": "Organization",
-          "name": "School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences"
-        }
-      },
-      "affiliation": {
-        "@type": "Organization",
-        "name": "Laboratory for the Study of Social Perception of Emotions"
-      },
-      "knowsAbout": [
-        "Social Psychology",
-        "Emotion Perception",
-        "Social Signals",
-        "Artificial Intelligence in Research",
-        "Emotion Communication",
-        "Personality Trait Inferences"
-      ],
-      "email": "shareli@univ.haifa.ac.il",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rabin's Building, Room 9136, 199 Aba Khoushy Ave., Mount Carmel",
-        "addressLocality": "Haifa",
-        "postalCode": "3498838",
-        "addressCountry": "IL"
-      }
+    :root {
+      --navy:    #1b3256;
+      --navy-lt: #2a4a7a;
+      --gold:    #b8892a;
+      --gold-lt: #d4a63a;
+      --ink:     #1e1e1e;
+      --muted:   #5a5a5a;
+      --border:  #d9d2c5;
+      --bg:      #f7f4ef;
+      --card-bg: #ffffff;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Source Sans 3', system-ui, sans-serif;
     }
-    </script>
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* ── SITE HEADER ─────────────────────────────── */
+    .site-header {
+      background: var(--navy);
+      color: white;
+      padding: 1.2rem 0 0;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
+    .header-inner img.logo {
+      height: 54px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+    }
+    .header-text h1 {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      color: #fff;
+    }
+    .header-text .tagline {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 0.2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── NAV ─────────────────────────────────────── */
+    nav {
+      background: var(--navy-lt);
+      margin-top: 1rem;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+    nav a, .dropdown-btn {
+      display: flex;
+      align-items: center;
+      padding: 0.7rem 1.1rem;
+      font-family: var(--sans);
+      font-size: 0.84rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      transition: background 0.15s, color 0.15s;
+      border: none;
+      background: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    nav a:hover, .dropdown-btn:hover, nav a.active {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+    nav a.active {
+      border-bottom: 2px solid var(--gold-lt);
+      color: #fff;
+    }
+    .dropdown { position: relative; }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--navy);
+      min-width: 220px;
+      z-index: 100;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a {
+      display: block;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.82rem;
+      text-transform: none;
+      letter-spacing: 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* ── MAIN ────────────────────────────────────── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+
+    /* ── HERO ────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-photo img {
+      width: 100%;
+      border-radius: 3px;
+      display: block;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    .hero-links {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .hero-links a {
+      font-size: 0.78rem;
+      color: var(--navy-lt);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .hero-links a:hover { color: var(--gold); text-decoration: underline; }
+    .hero-links a::before { content: '→'; }
+
+    .hero-bio h2 {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 0.3rem;
+    }
+    .hero-bio .title-line {
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .hero-bio p {
+      font-size: 1.02rem;
+      color: #333;
+      margin-bottom: 1em;
+      line-height: 1.75;
+    }
+    .hero-bio p strong { color: var(--ink); font-weight: 600; }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 1.6rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+    .btn-primary:hover { background: var(--navy-lt); }
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      background: transparent;
+      color: var(--navy);
+      font-family: var(--sans);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1.5px solid var(--navy);
+      border-radius: 2px;
+      transition: all 0.15s;
+    }
+    .btn-secondary:hover { background: var(--navy); color: #fff; }
+
+    /* ── SECTION TITLES ──────────────────────────── */
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.3rem;
+    }
+    .section-rule {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 1.8rem;
+    }
+
+    /* ── RESEARCH AREAS ──────────────────────────── */
+    .research-section { margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+    .research-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--navy);
+      padding: 1.4rem 1.5rem;
+      border-radius: 2px;
+      transition: box-shadow 0.15s, border-top-color 0.15s;
+    }
+    .research-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border-top-color: var(--gold);
+    }
+    .research-card .card-num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .research-card h3 {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+    .research-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── METHODOLOGY NOTE ────────────────────────── */
+    .methodology-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      padding: 1.4rem 1.8rem;
+      border-radius: 0 2px 2px 0;
+      margin-top: 1.4rem;
+    }
+    .methodology-box p {
+      font-size: 0.96rem;
+      color: #333;
+      line-height: 1.7;
+    }
+    .methodology-box p + p { margin-top: 0.7em; }
+    .methodology-box a { color: var(--navy-lt); }
+
+    /* ── PROFILES SECTION ────────────────────────── */
+    .profiles-section { margin-bottom: 3rem; }
+    .profiles-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+    .profile-chip {
+      display: inline-block;
+      padding: 0.45rem 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.84rem;
+      color: var(--navy-lt);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .profile-chip:hover {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+    footer strong { color: rgba(255,255,255,0.9); }
+
+    /* ── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 680px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-photo { max-width: 180px; }
+      .hero-bio h2 { font-size: 1.8rem; }
+      .nav-inner { flex-wrap: wrap; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-decoration">
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
-            <div class="header-shape"></div>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <img src="university-logo.png" alt="University of Haifa" class="logo">
+    <div class="header-text">
+      <h1>Prof. Shlomo Hareli</h1>
+      <p class="tagline">Social Psychologist &nbsp;·&nbsp; University of Haifa</p>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="active">Home</a>
+      <a href="research.html">Research</a>
+      <a href="students.html">Students</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="datasets.html">Datasets</a>
+      <a href="contact.html">Contact</a>
+      <div class="dropdown">
+        <button class="dropdown-btn">More ▾</button>
+        <div class="dropdown-menu">
+          <a href="news.html">In the News and on the Web</a>
+          <a href="posters.html">Posters at Conferences</a>
+          <a href="presentations.html">Invited Presentations</a>
+          <a href="facebook.html">My Facebook Group</a>
+          <a href="accessibility.html">Accessibility Statement</a>
         </div>
-        <div class="header-content">
-            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <img src="university-logo.png" alt="University of Haifa Logo" style="height: 60px; width: auto; background-color: white; padding: 5px; border-radius: 4px;">
-                <div>
-                    <h1>Prof. Shlomo Hareli</h1>
-                    <p>Social Psychologist | University of Haifa</p>
-                    <p class="header-tagline">Emotion Perception × AI Research × Evidence-Based Teaching</p>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="datasets.html">Datasets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-                <li class="dropdown"><a href="#" role="button" aria-label="More pages menu" aria-expanded="false" aria-haspopup="true" onclick="event.preventDefault(); var menu = this.nextElementSibling; var isOpen = menu.style.display === 'block'; menu.style.display = isOpen ? 'none' : 'block'; this.setAttribute('aria-expanded', !isOpen); return false;">More ▼</a><div class="dropdown-content" role="menu" style="display: none;"><a href="news.html" role="menuitem">In the News and on the Web</a><a href="posters.html" role="menuitem">Posters at Conferences</a><a href="presentations.html" role="menuitem">Invited Presentations</a><a href="facebook.html" role="menuitem">My Facebook Group</a><a href="accessibility.html" role="menuitem">Accessibility Statement</a></div></li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+    </div>
+  </nav>
+</header>
 
-    <div class="container">
-        <main>
-            <section>
-                <h1>About Me</h1>
-                <div class="profile-section">
-                    <img src="profile-photo.jpg" alt="Prof. Shlomo Hareli" class="profile-photo">
-                    <div class="profile-text">
-                        <div class="about-box">
-                            <p><strong>Professor Shlomo Hareli</strong> investigates how emotions function as social signals. Based at the University of Haifa's School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences, he heads the Laboratory for the Study of Social Perception of Emotions and holds a professorship in the School of Business Administration.</p>
+<!-- MAIN -->
+<main>
 
-                            <p>His research program examines how emotions communicate social information, with work spanning diverse topics through extensive empirical investigation.</p>
-
-                            <p><strong>Office:</strong> Rabin's Building, Room 9136</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2>Research Interests</h2>
-                <p>Professor Hareli's research focuses on the social signal value and communication function of emotion expressions. His work spans the following key areas:</p>
-
-                <div class="research-item">
-                    <strong>1. Mapping Social Information from Emotions</strong>
-                    <p>Studying the types of social information people derive from observing emotions and their impact on domains like achievement, motivation, and relationships.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>2. Emotion Expression Dynamics and Social Interactions</strong>
-                    <p>Examining how emotion expression dynamics and unfolding social interactions impact emotion perception. Developed an influential "Frozen Dynamism" methodology for examining emotional expressions over time in controlled experiments.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>3. Context Effects on Emotion Perception</strong>
-                    <p>Examining the influence of context on emotion perception both empirically and theoretically. Made key contributions including identifying bidirectional relationships between context and emotions, and determining that different emotions have varying susceptibility to contextual factors ("situative informativeness").</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>4. Personality Trait Inferences from Emotions</strong>
-                    <p>Advancing understanding of how inferences about personality traits like modesty, arrogance, and dominance are drawn from emotional expressions and reactions.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>5. Theoretical Frameworks and Scholarly Contribution</strong>
-                    <p>Developing theoretical frameworks that integrate social-functional perspectives on emotion with empirical findings about how people use emotional expressions to navigate social contexts.</p>
-                </div>
-
-                <div class="research-item">
-                    <strong>6. AI Applications in Emotion Research and Pedagogy</strong>
-                    <p>Integrating generative AI to create validated research stimuli and transform emotion perception education through AI-enhanced methodologies.</p>
-
-                    <p style="margin-top: 15px;"><strong style="color: #2196F3;">Research Innovation:</strong></p>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                        <li><strong>AI-Generated Facial Expression Stimuli:</strong> Developed a comprehensive methodology for creating photorealistic facial expression stimuli using generative AI (Flux.1-dev diffusion models with custom-trained LoRA adaptations via ComfyUI). This approach provides unprecedented experimental control while maintaining ecological validity and photorealistic quality indistinguishable from real photographs.</li>
-
-                        <li><strong>Rigorous Dual Validation Framework:</strong> Established systematic validation protocols combining computational analysis (Py-Feat) with human behavioral validation, achieving 98.38% and 97.72% emotion recognition accuracy across multiple studies. This framework ensures AI-generated stimuli meet rigorous scientific standards for emotion perception research.</li>
-
-                        <li><strong>Systematic Stimulus Manipulation:</strong> Demonstrated precise control over multiple dimensions simultaneously (emotional expressions, body weight, facial features) while preserving identity consistency—capabilities impossible with traditional photographic or 3D modeling approaches.</li>
-
-                        <li><strong>Ethical Research Advancement:</strong> AI generation eliminates ethical concerns associated with photographing or recruiting individuals with stigmatized characteristics, while enabling creation of diverse, controlled stimulus sets previously unavailable to researchers.</li>
-
-                        <li><strong>Open Science Contribution:</strong> Validated image datasets, comprehensive workflow specifications, and LoRA models openly available on OSF, facilitating reproducible research and methodological transparency in emotion perception studies.</li>
-                    </ul>
-
-                    <p style="margin-top: 15px;"><strong style="color: #2196F3;">Pedagogical Applications:</strong></p>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                        <li><strong>Interactive AI Simulations:</strong> Creating real-time classroom demonstrations where students manipulate emotional expressions and contextual variables, experiencing firsthand how subtle changes influence perception—bridging abstract theory with concrete observation.</li>
-
-                        <li><strong>AI-Enhanced Teaching Materials:</strong> Leveraging AI tools (primarily Claude) to develop professional educational content including Hebrew-language briefing documents, data visualizations, interactive exercises, and culturally adapted materials that enhance student engagement and comprehension.</li>
-
-                        <li><strong>Live Experimental Demonstrations:</strong> Conducting in vivo analyses of emotion perception experiments during class sessions, with AI assistance enabling immediate data visualization and statistical interpretation that transforms the classroom into an active research laboratory.</li>
-
-                        <li><strong>Classroom Study Replications:</strong> Guiding students through systematic replications of influential emotion perception studies using AI-streamlined data collection and analysis pipelines, teaching both classic findings and contemporary methodological practices.</li>
-
-                        <li><strong>Critical AI Literacy Development:</strong> Training students to evaluate AI-generated content, understand validation requirements, and recognize both capabilities and limitations—preparing them as thoughtful practitioners in an AI-integrated research landscape.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section>
-                <h2>External Profiles and Links</h2>
-                <ul class="no-indent">
-                    <li><a href="https://en.wikipedia.org/wiki/Shlomo_Hareli" target="_blank" rel="noopener noreferrer">My Wikipedia Page</a></li>
-                    <li><a href="https://orcid.org/0000-0002-3101-868X" target="_blank" rel="noopener noreferrer">My ORCID Profile</a></li>
-                    <li><a href="https://scholar.google.co.il/citations?user=uIs135cAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">My Google Scholar Profile</a></li>
-                    <li><a href="https://scholarometer.indiana.edu/#author;uIs135cAAAAJ;0" target="_blank" rel="noopener noreferrer">Scholarometer</a></li>
-                    <li><a href="https://profiles.impactstory.org/u/0000-0002-3101-868X" target="_blank" rel="noopener noreferrer">My ImpactStory Profile</a></li>
-                    <li><a href="https://harelichat.netlify.app/" target="_blank" rel="noopener noreferrer">Hareli's ChatBot</a></li>
-                </ul>
-            </section>
-        </main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-photo">
+      <img src="profile-photo.jpg" alt="Prof. Shlomo Hareli">
+      <div class="hero-links">
+        <a href="https://scholar.google.co.il/citations?user=uIs135cAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-3101-868X" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://en.wikipedia.org/wiki/Shlomo_Hareli" target="_blank" rel="noopener">Wikipedia</a>
+        <a href="https://harelichat.netlify.app/" target="_blank" rel="noopener">Hareli's ChatBot</a>
+        <a href="contact.html">Office &amp; Contact</a>
+      </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Prof. Shlomo Hareli - University of Haifa</p>
-        <p>Laboratory for the Study of Social Perception of Emotions</p>
-        <p>School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences</p>
-    </footer>
+    <div class="hero-bio">
+      <h2>Shlomo Hareli</h2>
+      <p class="title-line">Full Professor &nbsp;·&nbsp; School of Business Administration &nbsp;·&nbsp; University of Haifa</p>
+
+      <p>
+        I study how emotions function as social signals — what observers learn about other people, situations, and social norms from witnessing someone's emotional reaction. My work sits at the intersection of social psychology, emotion science, and organizational behavior.
+      </p>
+      <p>
+        I head the <strong>Laboratory for the Study of Social Perception of Emotions</strong> at the University of Haifa and the Real Estate Program at the Business School. My collaborators include researchers across Europe, North America, and the Middle East, and my publications span leading journals in social psychology, cognition, and organizational behavior.
+      </p>
+      <p>
+        My theoretical contributions include the <em>Emotion-Based Inference in Context</em> (EBiC) model (with Ursula Hess) and a program of research on reverse appraisal — the idea that observers use others' emotions to infer what those people think about themselves, others, and events.
+      </p>
+
+      <div class="hero-actions">
+        <a href="research.html" class="btn-primary">Publications</a>
+        <a href="contact.html" class="btn-secondary">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH AREAS -->
+  <section class="research-section">
+    <h2 class="section-title">Research Areas</h2>
+    <div class="section-rule"></div>
+    <div class="research-grid">
+
+      <div class="research-card">
+        <div class="card-num">01</div>
+        <h3>Social Information in Emotions</h3>
+        <p>What types of social information do people extract from others' emotional reactions, and how do these inferences shape behavior in achievement, motivational, and relational contexts?</p>
+      </div>
+
+      <div class="research-card">
+        <div class="card-num">02</div>
+        <h3>Emotion Expression Dynamics</h3>
+        <p>How emotional expression unfolds over time shapes what observers perceive. I developed the "Frozen Dynamism" methodology to examine temporal aspects of expression in controlled experiments.</p>
+      </div>
+
+      <div class="research-card">
+        <div class="card-num">03</div>
+        <h3>Context Effects on Emotion Perception</h3>
+        <p>Context and emotion expressions reciprocally inform one another. My work includes identifying the concept of <em>situative informativeness</em> — the finding that different emotions vary in how strongly they override contextual information.</p>
+      </div>
+
+      <div class="research-card">
+        <div class="card-num">04</div>
+        <h3>Personality Inference from Emotions</h3>
+        <p>Emotional expressions are rich cues for trait attributions. Research in this area covers inferences of modesty, arrogance, dominance, and social power from what people feel and show.</p>
+      </div>
+
+      <div class="research-card">
+        <div class="card-num">05</div>
+        <h3>Attribution Theory</h3>
+        <p>Building on Weiner's framework, I examine how causal attributions shape social emotions — guilt, shame, envy, pride, sympathy — and how these emotions, in turn, communicate attributional content to observers.</p>
+      </div>
+
+      <div class="research-card">
+        <div class="card-num">06</div>
+        <h3>AI-Generated Research Stimuli</h3>
+        <p>I develop and validate AI-generated facial expression stimuli (Flux diffusion models, custom LoRA training, Py-Feat validation), providing fine-grained experimental control previously impossible with photographic methods.</p>
+      </div>
+
+    </div>
+
+    <div class="methodology-box">
+      <p>
+        <strong>A note on methodology:</strong> Generating and validating AI-produced stimuli has become a distinct research contribution. Our dual-validation framework — combining computational facial action coding with behavioral human validation — has achieved recognition accuracy above 97% across multiple studies. Validated image datasets and workflow specifications are openly available on <a href="https://osf.io/" target="_blank" rel="noopener">OSF</a>.
+      </p>
+      <p>
+        I also use these tools to develop interactive classroom demonstrations that bring emotion perception research to life — students manipulate expressions and contextual variables in real time, bridging theory and observation directly in the classroom.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXTERNAL PROFILES -->
+  <section class="profiles-section">
+    <h2 class="section-title">External Profiles</h2>
+    <div class="section-rule"></div>
+    <div class="profiles-grid">
+      <a class="profile-chip" href="https://en.wikipedia.org/wiki/Shlomo_Hareli" target="_blank" rel="noopener">Wikipedia</a>
+      <a class="profile-chip" href="https://orcid.org/0000-0002-3101-868X" target="_blank" rel="noopener">ORCID</a>
+      <a class="profile-chip" href="https://scholar.google.co.il/citations?user=uIs135cAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="profile-chip" href="https://scholarometer.indiana.edu/#author;uIs135cAAAAJ;0" target="_blank" rel="noopener">Scholarometer</a>
+      <a class="profile-chip" href="https://profiles.impactstory.org/u/0000-0002-3101-868X" target="_blank" rel="noopener">ImpactStory</a>
+      <a class="profile-chip" href="https://harelichat.netlify.app/" target="_blank" rel="noopener">Hareli's ChatBot</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>© 2026 Prof. Shlomo Hareli</strong> &nbsp;·&nbsp; University of Haifa</p>
+  <p>Laboratory for the Study of Social Perception of Emotions</p>
+  <p>School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences</p>
+  <p style="margin-top:0.6rem;font-size:0.75rem;">Rabin's Building, Room 9136 &nbsp;·&nbsp; <a href="mailto:shareli@univ.haifa.ac.il" style="color:rgba(255,255,255,0.65)">shareli@univ.haifa.ac.il</a></p>
+</footer>
+
 </body>
 </html>
