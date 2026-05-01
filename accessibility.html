@@ -36,7 +36,8 @@
     nav a.active { background: rgba(255,255,255,0.1); border-bottom: 2px solid var(--gold-lt); color: #fff; }
     .dropdown { position: relative; }
     .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--navy); min-width: 220px; z-index: 100; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
-    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu { display: block; }
     .dropdown-menu a { display: block; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-transform: none; letter-spacing: 0; border-top: 1px solid rgba(255,255,255,0.07); }
     .dropdown-menu a.active { background: rgba(255,255,255,0.1); color: #fff; }
     main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
@@ -64,9 +65,20 @@
     footer { background: var(--navy); color: rgba(255,255,255,0.65); text-align: center; padding: 2rem; font-size: 0.82rem; line-height: 1.8; }
     footer strong { color: rgba(255,255,255,0.9); }
     @media (max-width: 680px) { .nav-inner { flex-wrap: wrap; } main { padding: 2rem 1.2rem 3rem; } }
-</style>
+
+    /* Skip link */
+    .skip-link {
+      position: absolute; top: -100px; left: 1rem;
+      background: var(--gold); color: #fff;
+      padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600;
+      border-radius: 0 0 4px 4px; text-decoration: none; z-index: 999;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+  </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="header-inner">
     <img src="university-logo.png" alt="University of Haifa" class="logo">
@@ -81,46 +93,79 @@
 <a href="teaching.html">Teaching</a>
 <a href="datasets.html">Datasets</a>
 <a href="contact.html">Contact</a>
-<div class="dropdown"><button class="dropdown-btn">More ▾</button><div class="dropdown-menu"><a href="news.html">In the News and on the Web</a>
+<div class="dropdown"><button class="dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="More pages">More ▾</button><div class="dropdown-menu"><a href="news.html">In the News and on the Web</a>
 <a href="posters.html">Posters at Conferences</a>
 <a href="presentations.html">Invited Presentations</a>
 <a href="accessibility.html" class="active">Accessibility Statement</a>
 </div></div></div></nav>
 </header>
-<main>
+<main id="main-content">
 <h1 class="page-title">Accessibility Statement</h1>
 <div class="title-rule"></div>
-<p>This website is committed to providing equal access to all visitors, regardless of ability or the technology used to access it.</p>
+<p>This website is committed to providing equal access to all visitors, regardless of ability or the technology used to access the site. Below is an accurate account of what has been implemented and where limitations remain.</p>
 
-<h2 class="section-h">Standards</h2>
-<p>This website aims to conform to <strong>WCAG 2.1 Level AA</strong> standards, developed by the World Wide Web Consortium (W3C).</p>
+<h2 class="section-h">Standard</h2>
+<p>This website aims to conform to <strong>WCAG 2.1 Level AA</strong>, developed by the World Wide Web Consortium (W3C). Conformance is partial — the features below have been verified; a full independent audit has not been conducted.</p>
 
-<h2 class="section-h">Accessibility Features</h2>
+<h2 class="section-h">What Is Implemented</h2>
 <ul>
-  <li><strong>Semantic HTML:</strong> Proper structure ensures content is correctly interpreted by assistive technologies.</li>
-  <li><strong>Color Contrast:</strong> Text colors provide sufficient contrast against backgrounds for readability.</li>
-  <li><strong>Keyboard Navigation:</strong> All interactive elements are accessible without a mouse.</li>
-  <li><strong>Alternative Text:</strong> Images include descriptive alternative text for screen reader users.</li>
-  <li><strong>Responsive Design:</strong> Usable on all device sizes.</li>
-  <li><strong>Clear Navigation:</strong> Consistent structure and navigation throughout all pages.</li>
+  <li><strong>Skip to main content:</strong> A keyboard-accessible skip link appears at the top of every page, allowing screen reader and keyboard users to bypass the navigation.</li>
+  <li><strong>Keyboard navigation:</strong> All interactive elements — including the navigation dropdown — can be operated using the keyboard alone. The dropdown opens on focus and closes on Escape.</li>
+  <li><strong>ARIA attributes:</strong> The navigation dropdown button carries <code>aria-haspopup</code>, <code>aria-expanded</code>, and <code>aria-label</code> attributes that update dynamically with state.</li>
+  <li><strong>Alternative text:</strong> All images carry descriptive alt attributes.</li>
+  <li><strong>Language declaration:</strong> Every page declares <code>lang="en"</code> so screen readers use the correct pronunciation rules.</li>
+  <li><strong>Semantic HTML:</strong> Pages use <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, and a proper heading hierarchy.</li>
+  <li><strong>Colour contrast:</strong> Primary text combinations (navy on off-white, white on navy) meet the WCAG AA 4.5:1 contrast ratio for normal text.</li>
+  <li><strong>Responsive design:</strong> The layout adapts to all screen sizes including mobile.</li>
 </ul>
 
-<h2 class="section-h">Contact for Accessibility Issues</h2>
-<p>If you encounter accessibility difficulties, please contact:<br>
+<h2 class="section-h">Known Limitations</h2>
+<ul>
+  <li>External links (Google Drive PDFs, Google Scholar, etc.) are not under our control and may not meet accessibility standards.</li>
+  <li>The publications filter on the Research page uses JavaScript; users with scripting disabled will see all publications unfiltered, which is a valid fallback.</li>
+  <li>A full independent accessibility audit has not been conducted.</li>
+</ul>
+
+<h2 class="section-h">Reporting Issues</h2>
+<p>If you encounter an accessibility difficulty, please contact:<br>
 <strong>Prof. Shlomo Hareli</strong><br>
 Email: <a href="mailto:shareli@univ.haifa.ac.il">shareli@univ.haifa.ac.il</a><br>
 Phone: (972) 4-8288497</p>
 
-<h2 class="section-h">Third-Party Content</h2>
-<p>This website may link to external websites. We are not responsible for the accessibility of third-party sites.</p>
-
 <h2 class="section-h">Last Updated</h2>
-<p>This statement was last updated in May 2026.</p>
+<p>May 2026.</p>
 </main>
 <footer>
   <p><strong>© 2026 Prof. Shlomo Hareli</strong> &nbsp;·&nbsp; University of Haifa</p>
   <p>Laboratory for the Study of Social Perception of Emotions</p>
   <p>School of Business Administration, The Herta and Paul Amir Faculty of Social Sciences</p>
 </footer>
+
+<script>
+(function() {
+  var btn = document.querySelector('.dropdown-btn');
+  var menu = btn ? btn.nextElementSibling : null;
+  if (!btn || !menu) return;
+
+  function open()  { menu.style.display = 'block'; btn.setAttribute('aria-expanded','true');  }
+  function close() { menu.style.display = '';      btn.setAttribute('aria-expanded','false'); }
+  function isOpen(){ return menu.style.display === 'block'; }
+
+  btn.addEventListener('click', function(e) { e.stopPropagation(); isOpen() ? close() : open(); });
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); isOpen() ? close() : open(); }
+    if (e.key === 'Escape') close();
+  });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+  document.addEventListener('click', function(e) {
+    if (!btn.parentElement.contains(e.target)) close();
+  });
+
+  // Keep focus-visible inside menu from closing it
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('keydown', function(e) { if (e.key === 'Escape') { close(); btn.focus(); } });
+  });
+})();
+</script>
 </body>
 </html>

@@ -110,5 +110,32 @@
         <p>Laboratory for the Study of Social Perception of Emotions</p>
         <p>School of Business Administration, Faculty of Management</p>
     </footer>
+
+<script>
+(function() {
+  var btn = document.querySelector('.dropdown-btn');
+  var menu = btn ? btn.nextElementSibling : null;
+  if (!btn || !menu) return;
+
+  function open()  { menu.style.display = 'block'; btn.setAttribute('aria-expanded','true');  }
+  function close() { menu.style.display = '';      btn.setAttribute('aria-expanded','false'); }
+  function isOpen(){ return menu.style.display === 'block'; }
+
+  btn.addEventListener('click', function(e) { e.stopPropagation(); isOpen() ? close() : open(); });
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); isOpen() ? close() : open(); }
+    if (e.key === 'Escape') close();
+  });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+  document.addEventListener('click', function(e) {
+    if (!btn.parentElement.contains(e.target)) close();
+  });
+
+  // Keep focus-visible inside menu from closing it
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('keydown', function(e) { if (e.key === 'Escape') { close(); btn.focus(); } });
+  });
+})();
+</script>
 </body>
 </html>
