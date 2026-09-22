@@ -459,7 +459,7 @@
     <div class="year-section" id="y-2023">
       <div class="year-header">
         <span class="year-label">2023</span>
-        <span class="year-count">4</span>
+        <span class="year-count">3</span>
       </div>
       <ul class="pub-list">
 
@@ -1087,7 +1087,7 @@
     <div class="year-section" id="y-2000">
       <div class="year-header">
         <span class="year-label">1999–2005</span>
-        <span class="year-count">9</span>
+        <span class="year-count">10</span>
       </div>
       <ul class="pub-list">
 
@@ -1205,7 +1205,20 @@
         : Array.from(section.querySelectorAll('.pub-entry')).some(e => e.dataset.type === type);
       section.style.display = hasVisible ? '' : 'none';
     });
+
+    updateCounts(type);
   }
+
+  // Keep each year's count equal to the number of entries actually listed
+  function updateCounts(type) {
+    document.querySelectorAll('.year-section').forEach(section => {
+      const badge = section.querySelector('.year-count');
+      if (!badge) return;
+      const entries = Array.from(section.querySelectorAll('.pub-entry'));
+      badge.textContent = entries.filter(e => !type || type === 'all' || e.dataset.type === type).length;
+    });
+  }
+  updateCounts('all');
 </script>
 
 </body>
