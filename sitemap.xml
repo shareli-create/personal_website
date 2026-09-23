@@ -26,6 +26,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://shareli-create.github.io/personal_website/hsfee.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shareli-create.github.io/personal_website/body-weight-stimuli.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://shareli-create.github.io/personal_website/contact.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
